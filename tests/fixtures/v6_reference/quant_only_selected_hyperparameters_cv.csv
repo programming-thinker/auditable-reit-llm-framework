@@ -1,0 +1,2 @@
+model_name,selected_candidate_id,selected_hyperparameters_json,mean_cv_macro_f1,std_cv_macro_f1,mean_cv_weighted_f1,mean_cv_reduce_recall,selection_rule
+Multinomial Logistic Regression,LR_013,"{""C"": 0.01, ""l1_ratio"": 0.5, ""penalty"": ""elasticnet""}",0.2398267219110357,0.0871142782546128,0.25288061736905626,0.48558395850699265,"Highest mean_cv_macro_f1; ties: mean_cv_reduce_recall, mean_cv_weighted_f1, lower std_cv_macro_f1."

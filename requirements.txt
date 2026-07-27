@@ -1,0 +1,12 @@
+python-dotenv
+openai
+pyyaml
+diskcache
+tenacity
+structlog
+pydantic>=2.0
+fredapi
+yfinance
+pandas>=2.0
+numpy
+pyarrow

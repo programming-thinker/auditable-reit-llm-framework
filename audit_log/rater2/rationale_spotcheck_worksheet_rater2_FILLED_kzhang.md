@@ -1,0 +1,1615 @@
+# Rationale-Quality Scoring — Second Rater Worksheet (45 items)
+
+> **Read `RATER2_GUIDE_EN.md` in this folder before starting.**
+> Each item below has three `= ___` lines: write **0 / 1 / 2** after the `=`.
+> The notes line is optional. When all 45 items are done, fill in the two pre-printed
+> lines at the end (total time + independence declaration), save, and send this file
+> back to the author.
+> Rules (in brief): no lookups of anything dated after a decision date; never search a
+> company name or ticker; no AI tools; no discussing items with anyone before you submit.
+
+## Scoring rubric (0 / 1 / 2)
+
+| Dimension | Question | 0 | 1 | 2 |
+|------|------|---|---|---|
+| **entailment** | Do the cited facts logically support "reduce"? | No support / contradictory | Partial support (mixed signals) | Clear support |
+| **relevance** | Are the facts relevant to near-term downside risk? | Irrelevant / boilerplate | Tangential | Directly relevant (leverage / coverage / tenants / refinancing / impairments) |
+| **actionability** | Is the rationale specific enough to act on? | Vague | Somewhat specific, driver fuzzy | Specific: names the reduce driver with an event or number |
+
+---
+
+## 1. AMT — 2024-01-31
+
+- **Disclosure:** Disclosure shows mixed signals: VIL resumed full payments in Q3 2023 but prior impairments and ongoing strategic review in India persist; T-Mobile churn remains elevated through 2025. Debt refinancing and dividend declaration indicate financial stability, but risks from customer concentration and India uncertainty warrant caution.
+    - VIL made partial payments in 2022 and early 2023, but resumed full payments in Q3 2023 (10-Q).
+    - Goodwill impairment charge recorded in India for Q3 2023 (10-Q).
+    - T-Mobile churn expected to be elevated through 2025 due to contractual lease cancellations (10-K).
+    - Completed $1.5B senior notes offering in September 2023, using proceeds to repay revolver (8-K).
+    - Declared quarterly dividend of $1.62 per share in September 2023 (8-K).
+- **Fundamentals:** High debt-to-equity of 9.83 and low interest coverage of 2.49 indicate elevated financial risk and limited ability to service debt. The low FFO yield of 1.86% provides weak cash earnings relative to market cap, while the large NAV premium of 6.40 suggests overvaluation. Despite large size and liquidity, solvency concerns dominate.
+    - debt_to_equity: 9.83
+    - interest_cover: 2.49
+    - ffo_yield_proxy: 0.0186
+    - navprem_book_adj: 6.40
+- **Macro:** The inverted yield curve and elevated Fed funds rate signal monetary tightening and recession risk, which typically pressure REIT valuations. However, American Tower's infrastructure sector benefits from structural demand for data and connectivity, partially offsetting macro headwinds. Given the mixed signals, a hold stance is appropriate.
+    - Inverted yield curve: term_spread_10y_2y_lag1 = -0.35
+    - High Fed funds rate: FEDFUNDS_lag1 = 5.33%
+    - Low unemployment: UNRATE_lag1 = 3.8%
+- **Price:** Mixed momentum signals: 1-month return of -9.37% and 12-month return of -9.43% are negative, while 3-month return of 10.67% and 6-month return of 4.67% are positive. Deep drawdown of -29.01% suggests elevated risk, warranting caution.
+    - 1-month return: -0.093710
+    - 3-month return: 0.106686
+    - 6-month return: 0.046671
+    - 12-month return: -0.094322
+    - drawdown: -0.290155
+- **Aggregator:** Three agents (Disclosure, Macro, Price) assign highest probability to hold (0.5 each) due to mixed signals, while Fundamentals strongly favors reduce (0.6) citing high leverage and low interest coverage. The majority holds a cautious view, but the robust financial health risks from Fundamentals tilt the consensus toward a moderate reduce. Agreement is moderate due to the divergence between the stressed fundamentals versus the more neutral to mildly negative outlook from other agents.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) due to mixed signals between stressed fundamentals vs neutral macro/price. Directly relevant (2) and actionable (2) because it explicitly cites concrete risks like a 9.83 debt-to-equity ratio and T-Mobile churn. 
+
+---
+
+## 2. AMT — 2025-05-31
+
+- **Disclosure:** Disclosure is neutral overall: strategic divestitures (India, South Africa fiber) and debt reduction are positive, but elevated churn from T-Mobile through 2025 is a known headwind. The 10-K and 10-Q highlight strong non-cancellable lease revenue backlog and recurring revenue, balancing near-term risks.
+    - Completed sale of ATC TIPL in India in September 2024, using proceeds to repay debt
+    - Completed sale of South Africa fiber assets in March 2025
+    - Expected churn in U.S. & Canada property segment to remain elevated through 2025 due to T-Mobile lease cancellations
+- **Fundamentals:** AMT exhibits high leverage (0.637) and extreme debt-to-equity (15.206), indicating significant solvency risk despite an interest coverage ratio of 2.209. The FFO yield is low (0.017), and the NAV premium is very high (7.68), suggesting overvaluation. High idiosyncratic volatility (0.278) further elevates financial risk.
+    - leverage: 0.636926
+    - debt_to_equity: 15.205695
+    - interest_cover: 2.209126
+    - ffo_yield_proxy: 0.016849
+    - navprem_book_adj: 7.679568
+    - idio_vol: 0.278446
+- **Macro:** High interest rates (Fed funds 4.33%) increase financing costs for American Tower, a rate-sensitive infrastructure REIT with significant debt. However, low unemployment (4.2%) and moderate inflation (2.33%) support tenant demand and contractual escalators, providing partial offset. The positive yield curve (0.57%) reduces immediate recession risk, but elevated rates remain a headwind.
+    - FEDFUNDS_lag1: 4.330000
+    - DGS10_lag1: 4.170000
+    - term_spread_10y_2y_lag1: 0.570000
+    - UNRATE_lag1: 4.200000
+    - cpi_yoy_lag1: 0.023254
+- **Price:** Mixed momentum: 1-month return is negative (-4.77%) but 3-, 6-, and 12-month returns are positive (5.25%, 4.47%, 13.29%), indicating underlying positive trend. However, high volatility (26.89%) and a moderate drawdown (-18.82%) suggest elevated risk, warranting caution. Overall, the longer-term positive trend with near-term weakness leads to a hold bias.
+    - 1-month return: -4.77%
+    - 3-month return: 5.25%
+    - 6-month return: 4.47%
+    - 12-month return: 13.29%
+    - annualized volatility: 26.89%
+    - drawdown: -18.82%
+- **Aggregator:** The consensus leans toward reduction, driven by the Fundamentals agent's strong negative signals (high leverage, debt-to-equity, and low FFO yield) which indicate financial stress. The Disclosure and Macro agents are neutral to slightly bearish, citing interest rate headwinds and elevated churn, while the Price agent shows a hold bias due to mixed momentum. The disagreement between the bearish Fundamentals and the more balanced others lowers agreement, resulting in a moderate reduce tilt.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) due to mixed signals (awful fundamentals but neutral disclosure/macro). Directly relevant (2) and actionable (2) as it ties the reduce driver to concrete numbers like 15.206 debt-to-equity and elevated churn. 
+
+---
+
+## 3. AMT — 2024-12-31
+
+- **Disclosure:** The completion of the India divestiture and subsequent debt reduction, along with the announced sale of Australia and New Zealand assets, signal proactive portfolio management and improved financial flexibility. While T-Mobile-related churn remains a headwind, it is a known factor, and overall disclosure language is positive, with no material new risks identified.
+    - Completed sale of ATC TIPL (India) on September 12, 2024, for approximately $2.2 billion and used proceeds to repay revolving credit facility debt.
+    - Announced sale of ATC Australia and ATC New Zealand for total aggregate consideration of approximately $78.2 million.
+    - 2023 10-K risk factors note elevated churn from T-Mobile through 2025, but overall low churn of ~3%.
+- **Fundamentals:** High leverage (debt-to-equity 13.14, leverage 58.9%) and low interest coverage (2.21) indicate solvency stress. Low FFO yield (1.98%) and high NAV premium (6.10) suggest overvaluation. Elevated idiosyncratic volatility (0.198) adds risk.
+    - leverage: 0.589175
+    - debt_to_equity: 13.139488
+    - interest_cover: 2.209126
+    - ffo_yield_proxy: 0.019765
+    - navprem_book_adj: 6.101354
+    - idio_vol: 0.197678
+- **Macro:** High interest rates (Fed funds 4.64%, 10yr 4.18%) increase financing costs and cap rates for infrastructure REITs like American Tower, pressuring valuations. However, moderate inflation (2.72%) supports lease escalators, and strong 5G demand provides structural growth. The flat yield curve (spread 0.05%) signals mixed outlook, leading to a neutral-to-slightly-negative assessment.
+    - Fed funds rate at 4.64%
+    - 10-year Treasury at 4.18%
+    - term spread 10y-2y at 0.05% (flat)
+    - CPI yoy at 2.72%
+    - unemployment at 4.2%
+- **Price:** All four return horizons are negative (1m -11.46%, 3m -19.85%, 6m -4.11%, 12m -12.16%) with high annualized volatility (26.49%) and a deep drawdown of -31.20%. These signals indicate persistent selling pressure and distress, strongly favouring a reduction in position.
+    - ret_1m: -0.114644
+    - ret_3m: -0.198548
+    - ret_6m: -0.041128
+    - ret_12m: -0.121637
+    - vol_annualized: 0.264861
+    - drawdown: -0.312029
+- **Aggregator:** Three agents (Price, Fundamentals, Macro) converge on a negative outlook, citing strong downward momentum, high leverage and low FFO yield, and elevated interest rates. Disclosure agent alone sees positives from divestitures and debt reduction, but acknowledges T-Mobile churn. Overall, the weight of evidence supports a reduction, though the disagreement limits conviction.
+
+**Your scores:**
+
+- entailment = 2
+- relevance = 2
+- actionability = 2
+- notes (optional): Clear support (2) as positive divestitures are clearly outweighed by 13.14 D/E, low coverage, and -31.2% drawdown. Directly relevant (2) and highly actionable (2) given the specific numerical drivers. 
+
+---
+
+## 4. ARE — 2025-05-31
+
+- **Disclosure:** The 10-Q shows solid leasing volume, rental rate increases of 18.5% and 7.5% cash basis, a 4% dividend increase, and strong liquidity of $5.3B. The 8-K filings include an Investor Day with positive guidance and a successful $550M notes offering, indicating market access. While occupancy dropped slightly and same-property NOI was negative on a GAAP basis, cash-basis metrics and excluding lease expirations show growth. No material negative risk factors were identified.
+    - Rental rate increases on renewals and re-leasing of 18.5% and 7.5% (cash basis) for Q1 2025
+    - Dividend per share increased 4% to $5.24 annualized for the twelve months ended March 31, 2025
+    - Significant liquidity of $5.3 billion as of March 31, 2025
+    - Investment-grade or publicly traded large cap tenants represented 51% of annual rental revenue
+    - Issuance of $550 million 5.50% Senior Notes due 2035 on January 30, 2025
+- **Fundamentals:** Leverage is low at 32.6% and interest coverage of 4.1x is adequate, indicating solid solvency. However, a deep NAV discount of 0.52 and high idiosyncratic volatility of 0.23 suggest market concerns about valuation and risk, but FFO yield of 4.8% is reasonable. Overall financial health is adequate.
+    - leverage: 0.326278
+    - interest_cover: 4.143803
+    - navprem_book_adj: 0.516679
+    - ffo_yield_proxy: 0.048088
+    - idio_vol: 0.231953
+- **Macro:** High interest rates (Fed funds 4.33%, 10yr 4.17%) increase financing costs and cap rates, particularly impactful for rate-sensitive life science office sector. However, secular demand from biotech and a strong labor market (unemployment 4.2%) provide some offset. Overall, macro environment is moderately unfavourable, warranting cautious stance with a bias toward reduction.
+    - Fed funds rate at 4.33%
+    - 10-year treasury at 4.17%
+    - Term spread 0.57% (positive but flat curve)
+    - CPI YoY at 2.33% (moderate inflation)
+    - Unemployment at 4.2% (low)
+- **Price:** All return horizons (1m, 3m, 6m, 12m) are negative, with 3m at -30.4% and 12m at -38.0%. Drawdown is deep at -64.0% and volatility high at 33.6%, indicating distress and strong negative momentum. Risk-adjusted trend is very unfavourable.
+    - ret_1m: -0.033994
+    - ret_3m: -0.304002
+    - ret_6m: -0.345491
+    - ret_12m: -0.380221
+    - vol_annualized: 0.336042
+    - drawdown: -0.640044
+- **Aggregator:** Disclosure agent highlights strong leasing, dividend growth, and liquidity, supporting a positive outlook. Fundamentals agent notes low leverage and adequate coverage but deep NAV discount. However, Macro agent points to high interest rates pressuring valuations, and Price agent shows extremely negative momentum and deep drawdown (-64%). The strong price deterioration and macro headwinds outweigh the fundamental positives, leading to a consensus skewed toward reduction but with significant uncertainty due to the conflicting signals.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) due to conflicting signals between strong operational disclosure and extremely negative price momentum. Relevant (2) and actionable (2) due to citing the deep -64% drawdown and deep NAV discount as drivers. 
+
+---
+
+## 5. ARE — 2024-04-30
+
+- **Disclosure:** The 10-Q and recent 8-K filings show strong operating performance with rental rate increases of 33% and 19%, revenue growth of 9.7%, high occupancy (94.6%), and a solid balance sheet with $6.0B liquidity and 98.9% fixed-rate debt. No material negative risk factors were identified; disclosure sentiment is positive.
+    - Rental rate increases of 33.0% and 19.0% (cash basis) in Q1 2024
+    - Total revenues of $769.1 million, up 9.7% for Q1 2024
+    - Occupancy percentage of operating properties was 94.6% as of Dec 31, 2023
+    - Investment-grade or publicly traded large cap tenants represented 52% of total annual rental revenue
+    - Significant liquidity of $6.0 billion as of Mar 31, 2024
+    - 98.9% of debt has a fixed rate as of Mar 31, 2024
+- **Fundamentals:** Alexandria Real Estate exhibits moderate leverage (30.77%) and strong interest coverage (5.92x), indicating solid solvency. However, the FFO yield is low at 1.8%, and the stock trades at a 13.6% discount to NAV (navprem_book_adj=0.864), with elevated idiosyncratic volatility (14.6%), suggesting financial risk from weak cash earnings and market skepticism. Overall financial health is adequate.
+    - leverage: 0.307729
+    - interest_cover: 5.917902
+    - ffo_yield_proxy: 0.018000
+    - navprem_book_adj: 0.864316
+    - idio_vol: 0.146364
+- **Macro:** High interest rates (Fed funds 5.33%) and an inverted yield curve (spread -0.39%) increase financing costs and reduce venture capital for biotech tenants, pressuring ARE's demand and valuations. However, low unemployment (3.9%) and structural demand for lab space provide partial offset, preventing an extreme negative outlook.
+    - FEDFUNDS_lag1: 5.330000
+    - term_spread_10y_2y_lag1: -0.390000
+    - cpi_yoy_lag1: 0.034868
+    - UNRATE_lag1: 3.900000
+- **Price:** Short-term negative returns (-10.1% 1-month, -3.2% 3-month) and deep drawdown (-43.4%) indicate recent weakness and distress, while the strong 6-month return (+27.0%) suggests prior momentum. High volatility (31.2%) adds risk. The mixed signals lead to a cautious outlook with a bias toward reduction.
+    - ret_1m: -0.101156
+    - ret_3m: -0.031703
+    - ret_6m: 0.269502
+    - drawdown: -0.434495
+    - vol_annualized: 0.312089
+- **Aggregator:** Disclosure agent reports strong operating performance (occupancy 94.6%, rental growth 33%, revenue +9.7%) and solid balance sheet, supporting an increase. However, Macro agent highlights high interest rates and inverted yield curve pressuring biotech tenants, while Price agent notes recent negative returns (-10.1% 1-month) and deep drawdown (-43.4%), both favoring reduction. Fundamentals agent cites moderate leverage and adequate coverage but low FFO yield (1.8%) and elevated idiosyncratic volatility, leading to a hold bias. The consensus leans slightly toward reduction due to prevailing macro and price headwinds, with moderate agreement between two bearish agents, one bullish, and one neutral.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) given the clash between strong occupancy/balance sheet and negative macro/price. Relevant (2) and actionable (2) because it names specific downward drivers like the 1.8% FFO yield and -43.4% drawdown. 
+
+---
+
+## 6. ARE — 2024-08-31
+
+- **Disclosure:** The 10-Q shows strong operational performance with revenue growth, NOI growth, and a dividend increase, indicating solid fundamentals. However, the 8-K filing on August 6, 2024, reveals a lawsuit against New York City Health + Hospitals Corporation for fraud and breach of contract related to a land option, introducing material litigation risk. The absence of detailed risk factors in the 10-K excerpt limits assessment, but the overall sentiment is negative due to the new legal exposure.
+    - Total revenue up 7.4% for Q2 2024 vs Q2 2023
+    - Net operating income (cash basis) increased by $122.7 million annualized
+    - Common stock dividend declared $1.30 per share, up 5% year-over-year
+    - Filed lawsuit on August 6, 2024 alleging fraud in the inducement and breach of contract
+- **Fundamentals:** FFO yield of 1.74% is low, indicating weak cash earnings relative to market cap, but interest coverage of 5.9x is healthy and leverage at 30.8% is moderate. NAV discount of ~10.8% suggests potential undervaluation, though it may also reflect asset quality concerns. Large market cap and low illiquidity provide resilience. Overall financial health is adequate.
+    - ffo_yield_proxy: 0.017443
+    - interest_cover: 5.917902
+    - leverage: 0.307729
+    - navprem_book_adj: 0.891916
+    - ln_mktcap: 23.764017
+    - amihud_illiq: 0.129794
+- **Macro:** High interest rates (FEDFUNDS 5.33%) and an inverted yield curve (term spread -0.20%) create a challenging environment for REITs by increasing financing costs and compressing valuations. While life science office demand benefits from structural tailwinds, sensitivity to rates and recession risk from inversion lead to a negative outlook.
+    - FEDFUNDS_lag1: 5.330000
+    - term_spread_10y_2y_lag1: -0.200000
+    - cpi_yoy_lag1: 0.029415
+    - UNRATE_lag1: 4.200000
+- **Price:** Positive 1-month (1.9%) and 3-month (1.6%) returns suggest short-term upward momentum, but the 6-month return is negative (-2.1%) and drawdown remains deep at -40.98%, indicating significant past distress. High annualized volatility (24.35%) adds risk. Overall mixed signals lead to a neutral stance.
+    - 1-month return: 0.019
+    - 3-month return: 0.016
+    - 6-month return: -0.021
+    - 12-month return: 0.074
+    - annualized volatility: 0.244
+    - drawdown: -0.410
+- **Aggregator:** Consensus leans toward reduce due to litigation risk (Disclosure) and headwinds from high rates/inverted curve (Macro). Price and Fundamentals provide mixed signals but do not counterbalance the negative factors. Agreement is moderate as two agents strongly negative and two more neutral.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) because material litigation risk is offset by adequate fundamentals. Directly relevant (2) and actionable (2) because the reduce driver is tied to a specific lawsuit alleging fraud and breach of contract. 
+
+---
+
+## 7. BXP — 2024-02-29
+
+- **Disclosure:** The 10-K risk factors are extensive and standard for an office REIT, but the 10-Q explicitly notes slower leasing due to economic conditions and remote work trends, which are negative. However, management expresses optimism about return-to-office and the 8-Ks show proactive capital management (credit line increase). Overall, disclosure is balanced but with a slight negative tilt due to acknowledged headwinds.
+    - 10-K: 'potential sustained changes in client preferences and space utilization from full-time, collective in-person work environments to hybrid or remote work models'
+    - 10-Q: 'slower leasing volume in 2023 compared to last year' and 'economic conditions are the primary driver of our slower leasing activity'
+    - 8-K Filing 1: Exercise of accordion to increase credit facility by $500 million
+- **Fundamentals:** BXP exhibits strong financial health with low leverage of 12.68%, a healthy FFO yield of 10.05%, and adequate interest coverage of 2.76x. The slight NAV discount (91.4% of book) and large market cap (log 23.04) with low illiquidity further support resilience. These metrics indicate solid solvency and cash earnings, meriting an increase weighting.
+    - ffo_yield_proxy: 0.100478
+    - leverage: 0.126796
+    - interest_cover: 2.761693
+    - navprem_book_adj: 0.914166
+    - ln_mktcap: 23.041897
+    - amihud_illiq: 0.187362
+- **Macro:** The high Fed funds rate of 5.33% and inverted yield curve (-0.28 spread) severely pressure office REITs like BXP through elevated refinancing costs and recession risks. While low unemployment (3.7%) provides some cushion, the combination of still-high CPI (3.09%) and inverted curve signals a difficult environment for office demand and capital markets.
+    - FEDFUNDS_lag1: 5.33%
+    - term_spread_10y_2y_lag1: -0.28%
+    - cpi_yoy_lag1: 3.09%
+    - UNRATE_lag1: 3.70%
+- **Price:** Mixed momentum signals: 3-month return is strongly positive (15.26%) but 1-month return is negative (-2.68%) and 6-month return is flat (-0.06%). Annualized volatility is high (34.34%) and current drawdown is deep (-45.29%), indicating elevated risk. The combination of recent price weakness and high risk tilts the outlook slightly negative.
+    - 1-month return: -0.026767
+    - 3-month return: 0.152582
+    - 6-month return: -0.000640
+    - 12-month return: 0.056414
+    - annualized volatility: 0.343358
+    - current drawdown: -0.452940
+- **Aggregator:** The agents display significant divergence. Fundamentals agent is strongly bullish citing robust financial health, while Macro agent is heavily bearish due to high rates and inverted yield curve. Price agent is mildly bearish citing recent weakness and high risk, and Disclosure is neutral-to-bearish. The strong fundamental signal is offset by macroeconomic headwinds and price momentum. Agreement is low, indicating high uncertainty.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) due to strong fundamentals offsetting macro headwinds. Relevance is tangential (1) and actionability fuzzy (1) because the reduce call relies heavily on generic rate/curve macro statements rather than firm-specific distress. 
+
+---
+
+## 8. BXP — 2024-06-30
+
+- **Disclosure:** The 10-Q highlights strong operational metrics (91% occupancy in CBD assets) and a clear 'flight to quality' trend benefiting BXP. The 10-K risk factors are standard for the office sector, and recent 8-Ks contain only routine corporate actions. Overall, disclosure sentiment is positive relative to the REIT universe, suggesting reduced risk.
+    - 10-Q states 'premier workplaces have outperformed the broader office market consistently and substantially'
+    - 10-Q reports CBD assets are 91.0% occupied and 92.8% leased as of Q1 2024
+    - 10-K notes 2023 acquisition of Santa Monica Business Park and 100% pre-leased developments (e.g., 290 Binney Street)
+    - No adverse material events in recent 8-K filings (earnings releases, stock plan amendment, name change)
+- **Fundamentals:** Low leverage of 12.68% and adequate interest coverage of 2.76 indicate manageable solvency risk. FFO yield of 10.56% is healthy, while a moderate NAV discount of 13.05% suggests undervaluation but not distress. Large market cap ($13B) and low illiquidity (0.15) support resilience, leading to an adequate financial health assessment.
+    - leverage: 0.126796
+    - interest_cover: 2.761693
+    - ffo_yield_proxy: 0.105635
+    - navprem_book_adj: 0.869531
+    - ln_mktcap: 22.991839
+    - amihud_illiq: 0.150665
+- **Macro:** High interest rates (Fed funds 5.33%) and an inverted yield curve (-0.38%) exert strong headwinds on office REITs like BXP, increasing refinancing costs and reducing property values. Weak tenant demand due to hybrid work persists, making the environment unfavourable despite low unemployment (3.9%).
+    - term_spread_10y_2y_lag1: -0.380000 (inverted yield curve)
+    - FEDFUNDS_lag1: 5.330000 (high federal funds rate)
+    - cpi_yoy_lag1: 0.032443 (inflation above target but moderating)
+- **Price:** Short-term return is positive at 3.1%, but medium-term returns are negative (3m: -4.2%, 6m: -9.4%), and drawdown is deep at -46.3%. High volatility (22.1%) combined with negative medium-term momentum suggests risk. Long-term return is positive (12m: 13.8%), but overall signal is cautious due to deep drawdown and recent pullback.
+    - ret_1m: 0.031188
+    - ret_3m: -0.042074
+    - ret_6m: -0.093880
+    - drawdown: -0.462555
+- **Aggregator:** Disclosure and Fundamentals agents point to strong occupancy, low leverage, and adequate financial health, supporting a positive outlook. However, Macro and Price agents highlight severe headwinds from high interest rates, inverted yield curve, negative medium-term momentum, and deep drawdown. The stark disagreement between positive fundamentals and negative macro/price signals leads to a cautious consensus with elevated uncertainty, leaning slightly toward reduce.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) as negative macro/price clashes with positive firm-specifics. Relevance (1) and Actionability (1) are low because the reduce driver is mostly generic macro headwinds with a fuzzy connection to the firm. 
+
+---
+
+## 9. BXP — 2025-03-31
+
+- **Disclosure:** BXP's disclosures show stable operations with strong occupancy (90.1% in CBDs) and a long lease term (7.6 years), while recent credit facility amendment improves liquidity. However, standard office sector risks like hybrid work and interest rates persist, leading to a neutral sentiment.
+    - 10-Q reports CBD assets 90.1% occupied and 92.1% leased as of September 30, 2024.
+    - 10-K recognizes risks from hybrid work and high interest rates but highlights flight-to-quality trend.
+    - 8-K on March 28, 2025: BXP amended credit facility, increasing revolving line to $2.25B and extending maturity to 2030.
+- **Fundamentals:** BXP exhibits strong financial health with very low leverage of 12.65% and adequate interest coverage of 2.4, while FFO yield is healthy at 8.48%. NAV premium is near par (0.998) and the firm is large-cap (ln_mktcap 23.09) with moderate liquidity (amihud 0.172), though idiosyncratic volatility is elevated at 0.221, warranting slight caution.
+    - ffo_yield_proxy: 0.084803
+    - leverage: 0.126510
+    - interest_cover: 2.397364
+    - navprem_book_adj: 0.997899
+    - book_to_market: 0.509243
+    - ln_mktcap: 23.086956
+    - amihud_illiq: 0.172252
+    - idio_vol: 0.220594
+- **Macro:** High interest rates (Fed funds at 4.33%) and a flat yield curve (10Y-2Y spread 0.25%) increase refinancing costs and cap rates for office REITs, which are particularly rate-sensitive. Despite low unemployment at 4.2%, structural headwinds from remote work weaken tenant demand, making the outlook unfavourable. The positive but narrow spread offers little relief, and inflation at 2.8% keeps monetary policy restrictive.
+    - FEDFUNDS_lag1: 4.330000
+    - DGS10_lag1: 4.240000
+    - term_spread_10y_2y_lag1: 0.250000
+    - cpi_yoy_lag1: 0.028016
+    - UNRATE_lag1: 4.200000
+- **Price:** Negative returns across 1-, 3-, and 6-month horizons, combined with high annualized volatility (34.99%) and a deep drawdown (-38.94%), signal unfavorable momentum. The positive 12-month return (8.83%) is insufficient to offset recent weakness and elevated risk, suggesting further downside or continued pressure.
+    - ret_1m: -3.88%
+    - ret_3m: -8.31%
+    - ret_6m: -14.13%
+    - vol_annualized: 34.99%
+    - drawdown: -38.94%
+- **Aggregator:** Macro and Price agents strongly agree on a bearish outlook due to high interest rates and negative momentum, while Fundamentals agent is bullish on strong financial health. Disclosure agent is neutral. The consensus tilts toward reduce but with notable uncertainty, as the positive fundamentals provide a counterbalance.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) due to strong fundamentals vs bad price/macro. Relevance (1) and actionability (1) as the downside risk is primarily driven by generic high interest rates and negative price momentum rather than firm-level operational risks. 
+
+---
+
+## 10. CCI — 2025-11-30
+
+- **Disclosure:** The 10-K and 10-Q reveal a large expected loss of $700-$800 million (later realized as $1.3 billion) from the sale of the Fiber segment, indicating elevated risk and negative sentiment. New CEO appointment and dividend declaration are neutral factors, but the material impairment overshadows them.
+    - Strategic Fiber Agreement to sell Fiber segment for $8.5 billion with expected loss of $700-$800 million
+    - 10-Q reports loss from discontinued operations of $1.3 billion for nine months ended September 30, 2025
+    - Appointment of Christian H. Hillabrant as President and CEO effective September 15, 2025
+- **Fundamentals:** Crown Castle exhibits severe financial risk with leverage at 73.56% and debt-to-equity of 4.64, indicating high solvency stress. The FFO yield is very low at 0.52%, suggesting poor cash earnings relative to market cap, and despite a NAV premium of 1.80, the overall fundamentals point to a stressed financial health.
+    - leverage: 0.735612
+    - debt_to_equity: 4.636476
+    - ffo_yield_proxy: 0.005233
+    - navprem_book_adj: 1.795364
+- **Macro:** Infrastructure REITs like Crown Castle have strong structural demand from telecom and data usage, which provides resilience. The macro environment shows elevated but stable short-term rates (Fed funds at 4.09%) and a positive yield curve (10Y-2Y spread of 0.51%), indicating no immediate inverted-curve stress. Inflation is moderate (2.73% YoY) and unemployment low (4.4%), supporting tenant demand. However, high financing costs may pressure margins and slow new investments, leading to a neutral-to-cautious stance.
+    - FEDFUNDS_lag1: 4.090000
+    - DGS10_lag1: 4.110000
+    - term_spread_10y_2y_lag1: 0.510000
+    - cpi_yoy_lag1: 0.027291
+    - UNRATE_lag1: 4.400000
+- **Price:** Negative returns over 3, 6, and 12 months indicate persistent downward momentum, and the deep drawdown of -47.1% signals distress. The slight positive 1-month return offers minor offset, but overall risk-adjusted momentum is unfavourable.
+    - ret_3m: -0.068906
+    - ret_6m: -0.070253
+    - ret_12m: -0.092813
+    - drawdown: -0.471123
+- **Aggregator:** Disclosure, Price, and Fundamentals agents all strongly signal reduce (probabilities 0.60, 0.55, 0.60 respectively) citing the Fiber segment loss, downward momentum, and stressed financial health. Macro agent is more neutral (hold 0.50) due to stable macro conditions, but acknowledges high financing costs. Overall consensus leans heavily toward reduce with moderate agreement on hold and low on increase.
+
+**Your scores:**
+
+- entailment = 2
+- relevance = 2
+- actionability = 2
+- notes (optional): Clear support (2) as all agents align on severe risk without substantive opposing signals. Directly relevant (2) and actionable (2) by naming concrete drivers like the $1.3B Fiber segment loss and 73.5% leverage. 
+
+---
+
+## 11. CCI — 2025-08-31
+
+- **Disclosure:** The disclosed sale of the Fiber segment for $8.5B simplifies operations and provides capital but involves a significant impairment loss of $1.1B in the latest 10-Q. The company's core towers business remains stable, and management changes (new CFO) suggest strategic focus. Overall, the disclosure is mixed with positive strategic action offset by execution risk and losses, leading to a neutral sentiment.
+    - Strategic Fiber Transaction signed March 13, 2025, to sell Fiber segment for $8.5 billion (10-K excerpt)
+    - Expected loss of $700-800 million upon classification as held for sale (10-K excerpt)
+    - 10-Q reports loss from disposal of discontinued operations of $1.1 billion for six months ended June 30, 2025
+    - Fiber Business classified as discontinued operations (10-Q excerpt)
+    - Appointment of Katherine Motlagh to board (8-K March 11, 2025)
+    - Appointment of Sunit Patel as EVP and CFO (8-K March 12, 2025)
+- **Fundamentals:** Crown Castle exhibits high financial risk with leverage of 73.6% and debt-to-equity of 4.64, indicating heavy reliance on debt. Its FFO yield is extremely low at 0.48%, and idiosyncratic volatility is elevated at 0.177, suggesting cash flow instability. Despite a large market cap, the low book-to-market ratio (0.164) and missing interest coverage data point to overvaluation and potential solvency concerns.
+    - ffo_yield_proxy: 0.004818
+    - leverage: 0.735612
+    - debt_to_equity: 4.636476
+    - book_to_market: 0.164221
+    - idio_vol: 0.176620
+- **Macro:** Infrastructure REITs like Crown Castle benefit from structural demand for wireless connectivity and long-term leases with escalators, which can partially offset the drag from elevated interest rates. The positive term spread (0.43%) and moderate CPI inflation (2.74%) suggest a stable macroeconomic backdrop, but high Fed funds (4.33%) and 10Y yields (4.37%) increase financing pressure, warranting a cautious hold stance.
+    - FEDFUNDS_lag1: 4.330000
+    - DGS10_lag1: 4.370000
+    - term_spread_10y_2y_lag1: 0.430000
+    - cpi_yoy_lag1: 0.027426
+- **Price:** Mixed momentum with negative 1-month (-5.66%) and 12-month (-6.36%) returns but positive 6-month (8.27%). Deep drawdown of 43.2% indicates significant distress. Volatility is moderate at 19.8%, but the combination of negative longer-term momentum and severe drawdown suggests downside risk outweighs the intermediate-term bounce.
+    - ret_1m: -0.056618
+    - ret_12m: -0.063554
+    - drawdown: -0.431983
+- **Aggregator:** The specialist agents show a split: Disclosure (neutral) and Macro (rising rates) favor hold, while Price (mild downside momentum) and Fundamentals (stressed financial health) favor reduce. The consensus leans slightly toward reduce due to stronger evidence from Fundamentals (high leverage, low FFO yield) and Price (deep drawdown). All agents agree that increase is unlikely, resulting in a low probability of increase.
+
+**Your scores:**
+
+- entailment = 2
+- relevance = 2
+- actionability = 2
+- notes (optional): Clear support (2) driven by stressed financial health and massive impairment. Directly relevant (2) and actionable (2) as it explicitly names the $1.1B disposal loss and 73.6% leverage as reduce drivers. 
+
+---
+
+## 12. CCI — 2024-05-31
+
+- **Disclosure:** The filings show routine business updates and a significant debt refinancing, but also a CEO departure, which introduces uncertainty. Overall, the disclosure is neutral with no new material risk factors or worsening conditions.
+    - 8-K Filing 2: $1.5B senior notes offering to repay commercial paper
+    - 8-K Filing 5: CEO Jay Brown retiring, interim CEO appointed
+    - 8-K Filing 4: Bylaw amendments removing acting in concert provisions after Elliott engagement
+- **Fundamentals:** CCI exhibits elevated financial risk with leverage at 0.5949 and debt-to-equity at 4.5345, indicating high debt burden. The FFO yield proxy is very low at 0.004673, suggesting weak cash earnings relative to market cap, while the NAV premium of 2.1289 and low book-to-market of 0.1593 imply potential overvaluation. Idiosyncratic volatility is high at 0.132991, adding to risk. Collectively, these signals point to a stressed financial health.
+    - leverage: 0.594933
+    - debt_to_equity: 4.534490
+    - ffo_yield_proxy: 0.004673
+    - navprem_book_adj: 2.128891
+    - book_to_market: 0.159283
+    - idio_vol: 0.132991
+- **Macro:** Infrastructure REITs like Crown Castle benefit from structural demand for wireless data and long-term contracts with escalators, partially offsetting the drag from high interest rates. The inverted yield curve (-0.35%) signals recession risk, but steady unemployment (3.9%) and moderate CPI (3.36%) suggest no immediate stagflation. Overall, the macro environment is mildly negative with mixed signals.
+    - FEDFUNDS_lag1: 5.33%
+    - DGS10_lag1: 4.69%
+    - DGS2_lag1: 5.04%
+    - term_spread_10y_2y_lag1: -0.35%
+    - cpi_yoy_lag1: 3.36%
+    - UNRATE_lag1: 3.9%
+- **Price:** Positive 1-month return (9.3%) is overshadowed by negative returns over 3, 6, and 12 months (-5.4%, -10.1%, -4.1%). Deep drawdown of -45.4% and moderate annualized volatility of 21.9% indicate ongoing risk within a longer-term downtrend. Momentum is mildly negative.
+    - 1-month return: 0.092983
+    - 3-month return: -0.054229
+    - 6-month return: -0.101375
+    - 12-month return: -0.040888
+    - drawdown: -0.453683
+    - annualized volatility: 0.218932
+- **Aggregator:** The consensus leans toward reduction, driven by stressed fundamentals (high leverage, low FFO yield) and negative price momentum. Disclosure and Macro are neutral, providing no strong counterweight. Moderate agreement as Price and Fundamentals align bearish while Disclosure and Macro are neutral.
+
+**Your scores:**
+
+- entailment = 2
+- relevance = 2
+- actionability = 2
+- notes (optional): Clear support (2) as bearish fundamentals and price momentum outweigh neutral disclosure. Relevant (2) and actionable (2) due to specific downside drivers like a 4.53 D/E and CEO departure. 
+
+---
+
+## 13. CPT — 2025-05-31
+
+- **Disclosure:** The 8-K filing reveals a new DOJ antitrust lawsuit alleging rent collusion, introducing material litigation risk. While Q1 2025 results show stable same-store revenue growth (0.8%) and strong liquidity ($1.2B revolver, $500M ATM program), the lawsuit could lead to significant legal costs or adverse outcomes. The 10-K also reports land impairment charges in 2024, though these are not new. Overall, disclosure sentiment is negative due to the litigation, outweighing neutral operational trends.
+    - DOJ antitrust lawsuit filed against CPT on January 7, 2025, alleging rent-fixing collusion (8-K Filing 1)
+    - Impairment charges on three parcels of land recorded in 2024 (10-K Item 1A)
+    - Same-store revenue increased 0.8% in Q1 2025 due to higher occupancy (10-Q)
+    - Acquisitions of two operating properties in Austin and Nashville in early 2025 (10-Q)
+    - Establishment of $600M commercial paper program in February 2025 (8-K Filing 3)
+    - Strong liquidity: $1.2B unsecured revolving credit facility and $500M ATM program available (10-Q)
+- **Fundamentals:** CPT exhibits strong financial health: moderate leverage of 39.4%, strong interest coverage of 6.74x, and a healthy FFO yield of 5.94%. The NAV premium of 1.314 indicates a premium valuation consistent with low financial distress risk. Size and liquidity are adequate, with large market cap and moderate illiquidity, supporting a positive outlook.
+    - leverage: 0.393758
+    - interest_cover: 6.741301
+    - ffo_yield_proxy: 0.059421
+    - navprem_book_adj: 1.314409
+- **Macro:** Elevated rates (Fed funds 4.33% and 10Y 4.17%) increase financing costs, but also support rental demand as homeownership becomes less affordable. Low unemployment (4.2%) and moderating CPI (2.33%) support tenant income and demand. The positive term spread (0.57%) indicates a normalizing yield curve, reducing immediate recession fears. Overall, the macro environment is moderately favorable for residential REITs, with balanced risks.
+    - Fed funds rate at 4.33% (elevated)
+    - 10Y Treasury at 4.17%
+    - Term spread (10Y-2Y) at 0.57% (positive)
+    - CPI YoY at 2.33% (moderating)
+    - Unemployment rate at 4.2% (low)
+- **Price:** The 12-month return is strongly positive at 18.55%, but the 3-month and 6-month returns are negative (-4.48% and -4.97%) with a deep drawdown of -26.29%. The 1-month positive return (3.24%) suggests a short-term bounce, but the medium-term momentum is negative and volatility is high (26.82%). Overall, the risk-adjusted trend is unfavorable, leading to a bias toward reducing exposure.
+    - ret_12m: 0.1855
+    - ret_3m: -0.0448
+    - ret_6m: -0.0497
+    - drawdown: -0.2629
+    - vol_annualized: 0.2682
+- **Aggregator:** Disclosure and Price agents both signal negative outlook: Disclosure cites material litigation risk from DOJ antitrust lawsuit, and Price shows negative medium-term momentum despite a short-term bounce. Fundamentals agent strongly positive based on healthy leverage, interest coverage, and FFO yield, while Macro agent is balanced but moderately favorable. Significant disagreement between Fundamentals vs. Disclosure/Price, with Macro neutral. The consensus leans toward reduce given the weight of the legal risk and negative price trend, but the high uncertainty prevents extreme confidence.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) due to the clash between severe litigation risk and strong fundamentals. Directly relevant (2) and actionable (2) as the reduce driver is tied to a specific DOJ antitrust lawsuit alleging rent collusion. 
+
+---
+
+## 14. CPT — 2025-03-31
+
+- **Disclosure:** The disclosure reveals material negative risks: Camden recorded a $41 million impairment on land parcels in the 10-Q and was named in a DOJ antitrust lawsuit regarding rental software collusion, as reported in an 8-K. These events elevate risk relative to peers and suggest a deteriorating outlook.
+    - 10-Q reports $41.0 million impairment charge on three land parcels and stoppage of four developments
+    - 8-K filed January 10, 2025 discloses CPT was named in a civil lawsuit by DOJ and ten states alleging antitrust violations related to revenue management software
+- **Fundamentals:** Camden Property Trust exhibits solid financial health with moderate leverage (39.38%), strong interest coverage (6.74x), and a healthy FFO yield (5.71%). The NAV premium (1.37) indicates market confidence, while low illiquidity (0.09) and large market cap ($13B) suggest resilience. These fundamentals point to low financial risk.
+    - ffo_yield_proxy: 0.057084
+    - leverage: 0.393758
+    - interest_cover: 6.741301
+    - navprem_book_adj: 1.368220
+    - amihud_illiq: 0.090277
+    - ln_mktcap: 23.292545
+- **Macro:** Elevated rates (Fed funds at 4.33%, 10Y at 4.24%) support rental demand as homeownership becomes less affordable, but increase refinancing pressure. Low unemployment (4.2%) and moderate inflation (2.8%) provide a stable backdrop. The flat yield curve (spread 0.25) indicates modest growth expectations, leading to a neutral-to-slightly-positive outlook for residential REITs.
+    - FEDFUNDS_lag1: 4.330000
+    - DGS10_lag1: 4.240000
+    - term_spread_10y_2y_lag1: 0.250000
+    - cpi_yoy_lag1: 0.028016
+    - UNRATE_lag1: 4.200000
+- **Price:** Strong positive 12-month return of 28.73% indicates solid long-term momentum, but the negative 1-month return (-0.57%) and deep drawdown (-23.27%) suggest recent weakness and potential for further decline. Moderate volatility (18.67%) does not signal extreme distress. Overall, the trend is mixed, favoring a hold with cautious optimism.
+    - 1-month return of -0.57%
+    - 12-month return of +28.73%
+    - drawdown of -23.27%
+- **Aggregator:** The Disclosure agent's material negative risks ($41M impairment and DOJ antitrust lawsuit) strongly argue for a reduce position, outweighing the strong fundamentals (low leverage, high interest coverage) from the Fundamentals agent. The Macro agent's neutral-to-slightly positive outlook and Price agent's mixed momentum (strong long-term return but recent weakness) support a hold stance. Overall, the high-impact negative disclosure dominates, leading to a consensus leaning reduce with moderate hold probability. Agreement is low due to stark divergence between Disclosure (negative) and Fundamentals (positive).
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) because the negative disclosure is counterbalanced by solid financial health. Relevant (2) and actionable (2) by naming specific events like the $41M impairment and DOJ antitrust lawsuit. 
+
+---
+
+## 15. CPT — 2025-09-30
+
+- **Disclosure:** Disclosure highlights a significant gain on sale ($47.3M) and same-store revenue growth of ~1%, indicating operational stability. The establishment of a $600M commercial paper program and strong liquidity ($1.2B revolver) suggest proactive debt management. However, the 10-K notes impairment charges on land parcels and substantial debt ($3.5B), tempering the positive outlook.
+    - Net income increased $37.8M in Q2 2025 primarily due to a $47.3M gain on sale of an operating property (10-Q)
+    - Established a $600M commercial paper program with $515.6M outstanding at June 30, 2025 (10-Q)
+    - Recorded impairment charges on three parcels of land in 2024 (10-K Risk Factors)
+    - Same-store revenues increased 1.0% and 0.9% for the three and six months ended June 30, 2025 (10-Q)
+- **Fundamentals:** Camden Property Trust exhibits strong financial health with moderate leverage of 0.39, robust interest coverage of 6.74, and a healthy FFO yield of 6.54%. The NAV premium of 1.19 and large market cap further indicate resilience and low distress risk.
+    - leverage: 0.393758
+    - interest_cover: 6.741301
+    - ffo_yield_proxy: 0.065380
+    - navprem_book_adj: 1.194592
+- **Macro:** Low unemployment (4.3%) and moderate CPI inflation (2.94%) support residential rental demand, benefiting Camden's portfolio. However, elevated Fed funds rate (4.33%) and positive but narrow term spread (0.64%) imply financing costs remain high, pressuring valuations. Overall, the macro backdrop is mildly favorable for operations but tempered by rate headwinds, leading to a balanced outlook.
+    - FEDFUNDS_lag1: 4.330000
+    - cpi_yoy_lag1: 0.029386
+    - UNRATE_lag1: 4.300000
+    - term_spread_10y_2y_lag1: 0.640000
+- **Price:** All return horizons are negative (1m: -3.69%, 3m: -4.30%, 6m: -11.00%, 12m: -10.34%), indicating persistent downward momentum. Annualized volatility is elevated at 19.41% and drawdown is deep at -31.71%, suggesting distress. The combination of negative returns and high risk strongly favors a reduction.
+    - ret_1m: -0.036946
+    - ret_3m: -0.043014
+    - ret_6m: -0.109997
+    - ret_12m: -0.103441
+    - vol_annualized: 0.194140
+    - drawdown: -0.317099
+- **Aggregator:** The Price agent indicates strong negative momentum and deep drawdown, favoring reduction, while the Fundamentals agent highlights robust financial health and high FFO yield, favoring increase. Disclosure and Macro agents are moderately positive to neutral, citing operational stability but rate headwinds and impairments. The significant disagreement between bearish price action and bullish fundamentals results in a cautious consensus leaning slightly toward reduction, with a notable hold probability reflecting the mixed signals.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) due to a stark contrast between bearish price and bullish fundamentals. Relevance (1) and Actionability (1) as the reduce driver relies on fuzzy negative momentum and generic macro headwinds rather than clear fundamental distress. 
+
+---
+
+## 16. CUBE — 2024-12-31
+
+- **Disclosure:** The disclosure language is routine and boilerplate, with no new or worsening risks identified. The 10-K shows moderate leverage (debt to market cap improved to 21.8%) and stable occupancy (89.8%). Recent 8-Ks are standard earnings releases and investor presentations, with no material events like impairments or tenant defaults. Overall sentiment is neutral.
+    - Debt to total market capitalization ratio improved from 24.8% in 2022 to 21.8% in 2023
+    - Occupancy at owned stores was 89.8% as of December 31, 2023, with no single customer concentration
+    - No material litigation or environmental liabilities disclosed
+    - Recent 8-K filings (Aug 1, Sep 9, Oct 31, Nov 18, 2024) are routine earnings releases and investor slides, no material events
+- **Fundamentals:** CubeSmart exhibits moderate financial health with a debt-to-equity of 1.19, indicating manageable leverage, and a large market cap (ln_mktcap=22.99) supporting resilience. However, the FFO yield proxy is low at 2.52%, and the NAV premium is high at 2.29, suggesting potential overvaluation. Key solvency metrics (leverage, interest coverage) are unavailable, preventing a definitive strong assessment.
+    - debt_to_equity: 1.194862
+    - ffo_yield_proxy: 0.025239
+    - navprem_book_adj: 2.286794
+    - ln_mktcap: 22.989115
+    - amihud_illiq: 0.186042
+    - idio_vol: 0.104960
+- **Macro:** High interest rates (Fed funds 4.64%) and a flat yield curve (term spread 0.05bps) increase refinancing costs for self-storage REITs, but short lease durations allow rent repricing. Low unemployment (4.2%) supports steady demand, while inflation (2.72%) remains above target, creating a neutral-to-slightly-negative macro environment for the sector.
+    - FEDFUNDS_lag1: 4.640000
+    - term_spread_10y_2y_lag1: 0.050000
+    - cpi_yoy_lag1: 0.027195
+    - UNRATE_lag1: 4.200000
+- **Price:** All return horizons (1m, 3m, 6m, 12m) are negative, with a deep drawdown of -19.6% and moderate annualized volatility of 24.1%. This widespread negative momentum indicates persistent selling pressure, suggesting a high probability of further decline.
+    - ret_1m: -0.135392
+    - ret_3m: -0.196362
+    - ret_6m: -0.031351
+    - ret_12m: -0.045287
+    - drawdown: -0.196362
+- **Aggregator:** The Disclosure, Macro, and Fundamentals agents all assign highest probability to 'hold', citing neutral sentiment, moderate macro conditions, and adequate financial health. However, the Price agent strongly predicts 'reduce' with all return horizons negative and deep drawdown, indicating persistent selling pressure. Given the strength of this momentum signal, we give it additional weight, resulting in a consensus that leans toward 'reduce' but with notable uncertainty. The low agreement score (0.3) reflects this divergence.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) as the reduce call is driven entirely by price momentum while other modules are neutral. Tangential relevance (1) and fuzzy actionability (1) due to lacking concrete firm-level distress drivers. 
+
+---
+
+## 17. CUBE — 2025-07-31
+
+- **Disclosure:** CubeSmart's disclosure reveals a significant growth acquisition (28 stores for $452.8 million in February 2025) and a low debt-to-enterprise value ratio of 23.3%, suggesting financial strength and proactive portfolio expansion. Risk factors remain boilerplate, with no new or worsening issues highlighted. The overall sentiment is positive.
+    - Acquired remaining 80% interest in HVP IV for $452.8 million, adding 28 stores (10-Q).
+    - Debt to total enterprise value ratio of 23.3% as of Dec 31, 2024 (10-K).
+    - No single customer represents significant revenue concentration (10-K).
+- **Fundamentals:** CUBE exhibits moderate debt-to-equity (1.20) and a healthy FFO yield (2.84%), but a high NAV premium (1.99) suggests possible overvaluation. Size is large (ln_mktcap=22.91) and idiosyncratic volatility is moderate (11.79%). Missing leverage and interest cover limit solvency assessment, but overall financial health appears adequate.
+    - ffo_yield_proxy: 0.0284
+    - debt_to_equity: 1.197941
+    - navprem_book_adj: 1.986987
+    - book_to_market: 0.323888
+    - ln_mktcap: 22.905582
+- **Macro:** Self-storage REITs benefit from structural demand and low unemployment (4.1%), while the positive term spread (0.52%) suggests a normal yield curve, reducing refinancing risks. However, elevated Fed funds (4.33%) and CPI (2.68%) may pressure consumer spending and cap rates, leading to a cautious outlook.
+    - FEDFUNDS_lag1: 4.330000
+    - term_spread_10y_2y_lag1: 0.520000
+    - cpi_yoy_lag1: 0.026805
+    - UNRATE_lag1: 4.100000
+- **Price:** All momentum horizons are negative, with a 12-month return of -14.35% and a deep drawdown of -24.29%, indicating sustained price weakness. Volatility is moderate at 24.46%, but the consistent negative trend and significant drawdown suggest risk of further decline, supporting a reduce stance.
+    - ret_1m: -0.073130
+    - ret_3m: -0.031424
+    - ret_6m: -0.043705
+    - ret_12m: -0.143475
+    - drawdown: -0.242923
+    - vol_annualized: 0.244615
+- **Aggregator:** Disclosure (increase 60%) highlights strong acquisition and low debt, but Price (reduce 75%) shows sustained negative momentum and deep drawdown (-24%). Macro and Fundamentals are cautiously neutral. The strong disagreement between Disclosure and Price, with macro headwinds and overvaluation concerns, tilts the consensus moderately toward reduce.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) as strong negative momentum clashes with positive disclosure (acquisitions). Relevance and actionability are 1 because the driver is generic momentum rather than concrete fundamental risks. 
+
+---
+
+## 18. CUBE — 2025-02-28
+
+- **Disclosure:** The disclosure language is largely boilerplate with no new or worsening risk factors. Store count increased but occupancy dipped slightly, and debt ratios remain moderate. The COO retirement is a planned transition, not a negative event. Overall, the risk profile is stable.
+    - Store count increased from 611 to 631 as of December 31, 2024
+    - Occupancy decreased from 89.8% to 88.8% year-over-year
+    - Debt to total enterprise value ratio rose from 21.8% to 23.3%
+    - COO Joel Keaton announced retirement effective April 30, 2025 with a consulting agreement
+- **Fundamentals:** CUBE shows a moderate debt-to-equity ratio of 1.20, but interest coverage is unavailable. The FFO yield of 2.68% is low, and the NAV premium of 2.11 suggests rich valuation. Idiosyncratic volatility is 12%, and liquidity is moderate. Overall financial health is adequate with no extreme stress signals, but the low FFO yield and high premium warrant caution.
+    - debt_to_equity: 1.197941
+    - ffo_yield_proxy: 0.026769
+    - navprem_book_adj: 2.108014
+    - idio_vol: 0.120195
+    - amihud_illiq: 0.141789
+- **Macro:** Self storage demand remains supported by low unemployment (4.0%) and moderate CPI inflation (2.99%), which sustain consumer moving activity. However, elevated Fed funds (4.33%) and 10-year yield (4.58%) increase financing costs and cap rate pressure, limiting upside. The slightly positive term spread (0.36%) suggests a flattening but not yet inverted curve, balancing risks.
+    - FEDFUNDS_lag1: 4.33%
+    - DGS10_lag1: 4.58%
+    - term_spread_10y_2y_lag1: 0.36%
+    - cpi_yoy_lag1: 2.99%
+    - UNRATE_lag1: 4.0%
+- **Price:** CUBE shows negative returns across all measured horizons, with a 3-month return of -15.68% and 6-month return of -18.61%. The deep drawdown of -21.63% and moderate annualized volatility of 20.80% indicate ongoing weakness and potential distress. Combined with slightly negative 12-month return, momentum is strongly bearish.
+    - ret_1m: -0.010072
+    - ret_3m: -0.156838
+    - ret_6m: -0.186055
+    - ret_12m: -0.010472
+    - drawdown: -0.216296
+    - vol_annualized: 0.208016
+- **Aggregator:** The Price agent's strong bearish momentum (3-month return -15.68%) dominates, but Disclosure and Macro point to stable fundamentals and flat economic conditions, while Fundamentals sees adequate health but low FFO yield. The consensus is tilted toward reduce due to price weakness, but with significant disagreement from other agents, resulting in moderate agreement.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) as the bearish momentum dominates despite adequate fundamentals and neutral macro. Tangential relevance (1) and fuzzy actionability (1) because the driver is primarily price action. 
+
+---
+
+## 19. DLR — 2025-03-31
+
+- **Disclosure:** Disclosures emphasize strong demand, conservative leverage targets (debt/EBITDA ~5.5x), and proactive capital raising through debt and equity offerings, indicating growth momentum. No material risk factors or adverse events were identified.
+    - 10-K: Debt-to-Adjusted EBITDA target around 5.5x and fixed charge coverage greater than three times.
+    - 10-Q: Strong demand in most key metropolitan areas and expected positive aggregate rental rate growth.
+    - 8-Ks: Amendment to credit facilities, issuance of $1.15B exchangeable senior notes, and increase in authorized common stock with ATM program.
+- **Fundamentals:** Digital Realty shows low leverage (6.5%) but weak interest coverage (2.33x) and a very low FFO yield (1.25%), indicating high valuation relative to cash earnings. Additionally, idiosyncratic volatility is elevated (31.5%), signaling increased financial risk. Despite strong size and liquidity, the combination of poor coverage and low yield suggests a stressed financial health outlook.
+    - ffo_yield_proxy: 0.012490
+    - leverage: 0.064929
+    - interest_cover: 2.330482
+    - idio_vol: 0.315366
+- **Macro:** Data center REITs benefit from strong structural demand from cloud and AI, which offsets the headwind of elevated interest rates. The macro environment shows moderate inflation (2.8% YoY) and low unemployment (4.2%), supporting tenant demand, while a slightly positive yield curve (0.25%) suggests no imminent recession. Thus the environment is favorable for sector growth.
+    - CPI YoY at 2.8%
+    - Unemployment rate at 4.2%
+    - Term spread (10Y-2Y) at 0.25% positive
+- **Price:** DLR exhibits strong negative momentum with -7.56% 1-month, -18.51% 3-month, and -10.12% 6-month returns, despite a slight +2.59% 12-month gain. High annualized volatility (38.07%) and a significant drawdown of -25.68% indicate elevated risk and potential distress. The combination of pervasive short-term losses and risk metrics suggests a bearish outlook.
+    - 1-month return: -0.075627
+    - 3-month return: -0.185147
+    - 6-month return: -0.101241
+    - 12-month return: 0.025854
+    - annualized volatility: 0.380699
+    - drawdown: -0.256752
+- **Aggregator:** Two agents (Disclosure, Macro) are positive citing strong demand and favorable macro, but two agents (Price, Fundamentals) are bearish due to negative momentum and stressed financial health. The bearish signals are more concrete, leading to a consensus tilted toward reduction, but with notable disagreement.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) because stressed fundamentals conflict with positive macro/disclosure. Directly relevant (2) and actionable (2) by naming specific fundamental weaknesses like the 2.33x interest coverage and 1.25% FFO yield. 
+
+---
+
+## 20. EPR — 2024-07-31
+
+- **Disclosure:** The 10-K discloses significant ongoing risks related to theatre tenants and the experiential sector, including slow recovery from COVID-19 and labor disputes. However, the company is actively reducing theatre exposure and the 8-K filings show no material adverse events. Overall, the disclosure sentiment is neutral with a slight negative tilt due to sector headwinds.
+    - Risks associated with three tenants representing a substantial portion of lease revenues
+    - Theatre customers impacted by labor disputes and streaming experimentation
+    - Intent to significantly reduce investments in theatres
+- **Fundamentals:** EPR exhibits elevated financial risk with debt_to_equity of 1.57 and interest coverage of 2.39, signaling weak solvency. Additionally, high amihud illiquidity (0.37) and idiosyncratic volatility (0.13) reduce resilience, while the FFO yield of 5.08% and near-par NAV premium of 0.97 provide limited offset. Overall, fundamentals indicate a stressed financial health.
+    - debt_to_equity: 1.565543
+    - interest_cover: 2.385942
+    - amihud_illiq: 0.366936
+    - idio_vol: 0.128421
+    - ffo_yield_proxy: 0.050812
+    - navprem_book_adj: 0.970393
+- **Macro:** High interest rates (FEDFUNDS 5.33%) and an inverted yield curve (term_spread -0.35) signal recession risk, which dampens consumer discretionary spending on experiential services. Experiential REITs are cyclical and face refinancing pressure, making the macro environment unfavourable for growth.
+    - FEDFUNDS_lag1: 5.330000
+    - term_spread_10y_2y_lag1: -0.350000
+    - cpi_yoy_lag1: 0.029703
+    - UNRATE_lag1: 4.100000
+- **Price:** Positive returns across all horizons (1m: 7.9%, 3m: 13.1%, 6m: 5.9%, 12m: 9.0%) with moderate annualized volatility of 19.5% indicate favorable momentum. However, a deep drawdown of -23.6% suggests the stock has not fully recovered, tempering conviction. Overall, momentum is positive but not strong enough to warrant aggressive increase.
+    - 1-month return: 0.078661
+    - 3-month return: 0.131209
+    - 6-month return: 0.058682
+    - 12-month return: 0.089884
+    - annualized volatility: 0.195452
+    - drawdown: -0.236034
+- **Aggregator:** Macro and Fundamentals agents strongly advocate reduce due to high interest rates and stressed financial health (debt/equity 1.57, interest coverage 2.39). Disclosure is neutral but notes theatre tenant risks. Price agent diverges with positive momentum (1m return 7.9%) but tempered by a deep drawdown (-23.6%). The consensus favors reduce with a significant hold component, reflecting the tension between cyclical headwinds and recent price strength.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) because high leverage and macro headwinds are mixed with positive price momentum. Relevant (2) and actionable (2) by citing specific drivers like 1.57 debt-to-equity, 2.39 coverage, and theatre tenant risks. 
+
+---
+
+## 21. EPR — 2025-07-31
+
+- **Disclosure:** The 10-K discloses persistent risks such as theatre concentration, inflation, and elevated cost of capital, but also outlines strategies to reduce theatre exposure and maintain moderate investment levels. The 10-Q and recent 8-Ks show routine updates with no material adverse events; the CIO retirement is a planned succession. Overall, disclosure is neutral with no clear positive or negative shift.
+    - 10-K risk factors include theatre concentration, inflation, interest rate volatility, and elevated cost of capital leading to moderate investment spending.
+    - 10-K states intention to significantly reduce theatre investments and dispose of education portfolio.
+    - 8-K on July 28, 2025 announces retirement of CIO Gregory Zimmerman with a planned successor, no disagreement.
+- **Fundamentals:** EPR exhibits elevated financial risk with leverage at 0.51 and debt-to-equity of 1.59, while interest coverage of 2.12 indicates weak solvency cushion. Despite a moderate FFO yield of 3.49% and a slight NAV premium (1.15), the high leverage and low coverage, combined with above-average idiosyncratic volatility (14.1%) and illiquidity (0.24), point to stressed financial health.
+    - leverage: 0.509295
+    - interest_cover: 2.116627
+    - debt_to_equity: 1.587981
+    - ffo_yield_proxy: 0.034889
+    - navprem_book_adj: 1.151266
+    - idio_vol: 0.140555
+    - amihud_illiq: 0.243481
+- **Macro:** Experiential REITs like EPR are supported by low unemployment (4.1%) and moderate inflation (2.68%), which sustain consumer spending. However, high interest rates (fed funds 4.33%, 10Y 4.24%) increase financing costs and may pressure valuations, leading to a cautious outlook.
+    - FEDFUNDS_lag1: 4.330000
+    - DGS10_lag1: 4.240000
+    - UNRATE_lag1: 4.100000
+    - cpi_yoy_lag1: 0.026805
+- **Price:** Despite a slight negative return in the most recent month (-5.03%), EPR shows strong positive momentum over 3, 6, and 12 months (12.98%, 23.38%, 31.14%) with moderate annualized volatility (18.2%). The drawdown of -5.03% is shallow, indicating no severe distress. Overall, the longer-term trend is favorable, but the short-term pullback warrants some caution.
+    - ret_1m: -5.03%
+    - ret_3m: +12.98%
+    - ret_6m: +23.38%
+    - ret_12m: +31.14%
+    - vol_annualized: 18.2%
+    - drawdown: -5.03%
+- **Aggregator:** There is significant disagreement among agents. The Price agent is bullish based on strong long-term momentum, while the Fundamentals agent is bearish citing high leverage and low interest coverage. The Disclosure and Macro agents are neutral, with Macro cautious due to rising rates. The consensus leans reduce due to fundamental stress, but uncertainty remains high.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) due to disagreement between bearish fundamentals and bullish price momentum. Relevant (2) and actionable (2) because it explicitly points to 1.59 debt-to-equity and 2.12 interest coverage as drivers. 
+
+---
+
+## 22. EPR — 2024-04-30
+
+- **Disclosure:** The 10-K shows extensive but standard risk factors, while the 10-Q details the successful restructuring of Regal (a major tenant) which reduces bankruptcy risk. The 8-K reports a routine officer retirement and financial results. Overall, disclosure is mixed but slightly positive due to resolution of Regal uncertainty and strong non-theatre recovery.
+    - Regal (Cineworld) emerged from Chapter 11 with a new master lease effective July 31, 2023, reducing annual fixed rent to $65M with 10% escalations every five years (10-Q).
+    - Non-theatre properties demonstrated strong recovery with overall rent coverage for 2023 above 2019 pre-pandemic levels (10-K).
+    - Company intends to significantly reduce theatre investments and pursue opportunistic dispositions (10-K).
+- **Fundamentals:** EPR shows moderate leverage of 49.4% and adequate interest coverage of 2.39x, but trades at a 12.5% NAV discount (NAV premium 0.875) and has a moderate FFO yield of 5.63%. The book-to-market of 0.68 and size suggest a large-cap REIT with some illiquidity (Amihud 0.35) and moderate idiosyncratic volatility (0.127). Overall financial health is adequate with no extreme stress signals, though the NAV discount and coverage level warrant caution.
+    - leverage: 0.493975
+    - interest_cover: 2.385942
+    - ffo_yield_proxy: 0.056332
+    - navprem_book_adj: 0.875294
+- **Macro:** High interest rates (FEDFUNDS at 5.33%) and an inverted yield curve (spread -0.39%) signal tight financial conditions and recession risk, which pressure consumer-facing experiential REITs through reduced discretionary spending and higher refinancing costs. Inflation remains elevated at 3.49% YoY, further squeezing household budgets, while low unemployment (3.9%) provides some buffer but is expected to rise. Overall, the macro environment is unfavorable for EPR's sector, favoring a reduction in exposure.
+    - FEDFUNDS_lag1: 5.33%
+    - term_spread_10y_2y_lag1: -0.39% (inverted)
+    - cpi_yoy_lag1: 3.49%
+    - UNRATE_lag1: 3.9%
+- **Price:** Short-term returns are negative across 1-month, 3-month, and 6-month horizons, and the drawdown is deep at -32.5% with high annualized volatility of 21.3%, signaling distress. The 12-month return is slightly positive (+4.5%), which prevents a fully bearish outlook, but the overall momentum is mildly downward.
+    - ret_1m: -0.037122
+    - ret_3m: -0.064114
+    - ret_6m: -0.012261
+    - ret_12m: 0.044542
+    - drawdown: -0.324647
+    - vol_annualized: 0.213139
+- **Aggregator:** The Macro and Price agents strongly signal reduction due to high interest rates, inverted yield curve, negative momentum, and deep drawdown. The Disclosure agent is neutral with a hold bias, citing successful Regal restructuring, while the Fundamentals agent sees adequate health but moderate leverage and NAV discount. The majority weight favors reduction (0.55) with moderate agreement (0.55) as the dissenting hold views temper a fully bearish stance.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) because negative macro/price clashes with adequate fundamentals and positive Regal restructuring. Tangential relevance (1) and fuzzy actionability (1) as the downside case leans heavily on generic macro/rates. 
+
+---
+
+## 23. EQIX — 2024-05-31
+
+- **Disclosure:** The most recent 8-K filing reveals that Equinix's Audit Committee commenced an independent investigation following a short seller report and received a subpoena from the U.S. Attorney's Office, introducing significant legal and reputational risk. Additionally, the 10-K details macroeconomic and operational risks including inflation, rising interest rates, power cost volatility, and geopolitical conflicts, while the 10-Q shows cabinet utilization declining from 82% to 79% year-over-year. These factors collectively suggest elevated risk relative to peers, warranting a higher probability of a reduce recommendation.
+    - 8-K filing on March 20, 2024: Audit Committee commenced independent investigation and received subpoena from U.S. Attorney's Office
+    - 10-K risk factors: Inflation, rising interest rates, power cost volatility, geopolitical conflicts (Russia-Ukraine and Middle East)
+    - 10-Q: Cabinet utilization declined from 82% to 79% year-over-year as of March 31, 2024
+- **Fundamentals:** EQIX exhibits strong financial health with low leverage of 0.424 and high interest coverage of 8.000, indicating solid solvency. The FFO yield of 0.039 reflects healthy cash earnings, and the NAV premium of 3.346 suggests market confidence, not distress. Combined with ample liquidity (low Amihud illiquidity) and large size, the firm is well-positioned.
+    - leverage: 0.423900
+    - interest_cover: 8.000403
+    - ffo_yield_proxy: 0.038983
+    - navprem_book_adj: 3.345807
+- **Macro:** Data center REITs like EQIX benefit from strong structural demand from cloud and AI, which helps offset the headwind of high interest rates. However, the inverted yield curve (term spread -0.35) signals potential recession, while high Fed funds (5.33%) increase refinancing costs. Moderate CPI (3.36%) and low unemployment (3.9%) support consumer spending, but rate sensitivity remains a concern. Overall, a net positive but cautious outlook.
+    - FEDFUNDS_lag1: 5.33%
+    - term_spread_10y_2y_lag1: -0.35%
+    - cpi_yoy_lag1: 3.36%
+    - UNRATE_lag1: 3.9%
+- **Price:** Short-term momentum positive (+7.87% 1-month) but medium-term negative (-13.70% 3-month, -5.42% 6-month). Annualized volatility is high at 46.09% and drawdown is -13.70%, signaling risk. The conflicting horizons and high risk suggest a neutral to slightly bearish outlook.
+    - ret_1m: 0.078721
+    - ret_3m: -0.136958
+    - ret_6m: -0.054207
+    - ret_12m: 0.044493
+    - vol_annualized: 0.460869
+    - drawdown: -0.136958
+- **Aggregator:** Consensus is weak due to strong disagreement between Disclosure's negative legal risks (subpoena, investigation, declining utilization) and Fundamentals' strong financial health (low leverage, high interest coverage, positive FFO yield). Macro and Price offer mixed signals: Macro sees structural demand but inverted yield curve, Price shows conflicting momentum and high volatility. The overall distribution is nearly uniform, with a slight tilt toward reduce given the legal uncertainty and market risk.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) because severe legal risk is mixed with strong financial health. Directly relevant (2) and actionable (2) as the driver is explicitly tied to the U.S. Attorney's Office subpoena and independent investigation. 
+
+---
+
+## 24. EQIX — 2024-06-30
+
+- **Disclosure:** The disclosure reveals a significant negative event: on March 20, 2024, Equinix announced an independent investigation and a subpoena from the U.S. Attorney's Office regarding a short seller report, indicating material legal and regulatory risk. While the 10-K contains standard macroeconomic and operational risks, this new development outweighs and suggests elevated risk. The 10-Q and other 8-Ks are routine or neutral, but the investigation creates substantial uncertainty.
+    - 8-K filing on March 20, 2024, discloses that the Audit Committee has commenced an independent investigation and received a subpoena from the U.S. Attorney's Office for the Northern District of California related to a short seller report.
+    - 10-K Item 1A details risks from inflation, rising interest rates, power cost volatility, geopolitical conflicts, and cybersecurity incidents.
+- **Fundamentals:** Equinix exhibits strong financial health with moderate leverage (42.4%), robust interest coverage (8.0x), and a healthy FFO yield (3.93%). Its large size (ln_mktcap 24.99) and low illiquidity (0.024) suggest resilience, while a high NAV premium (3.32) reflects market confidence. These factors point to low financial risk.
+    - leverage: 0.4239
+    - interest_cover: 8.000403
+    - ffo_yield_proxy: 0.039311
+    - navprem_book_adj: 3.317830
+    - ln_mktcap: 24.994229
+- **Macro:** Data center REITs benefit from strong structural demand from cloud and AI, offsetting the negative impact of high interest rates and an inverted yield curve. The inverted curve suggests recession risk, but data centers exhibit less cyclicality and may continue to see robust leasing. High rates increase financing costs, but the secular tailwinds support a neutral-to-positive outlook.
+    - term_spread_10y_2y_lag1: -0.38 (inverted yield curve)
+    - FEDFUNDS_lag1: 5.33 (high policy rate)
+    - CPI YoY: 3.24% (elevated but moderating inflation)
+- **Price:** All return horizons (1m -0.84%, 3m -7.83%, 6m -5.09%, 12m -1.50%) are negative, indicating persistent downside momentum. Moderate annualized volatility (17.04%) and a drawdown of -14.42% suggest ongoing weakness without extreme distress, supporting a reduction stance.
+    - ret_1m: -0.008362
+    - ret_3m: -0.078339
+    - ret_6m: -0.050913
+    - ret_12m: -0.014962
+    - drawdown: -0.144175
+- **Aggregator:** Disclosure and Price agents strongly indicate reduce (probabilities 0.7 and 0.6 respectively) due to material legal risk from the independent investigation and persistent negative momentum. Fundamentals agent strongly advocates increase (0.7) based on healthy financials, but the legal overhang likely outweighs this. Macro agent is neutral (increase/hold both 0.4) citing structural demand versus high rates. The consensus leans reduce with significant disagreement from Fundamentals, resulting in moderate uncertainty.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) as material legal risk and negative momentum clash with very strong fundamentals. Relevant (2) and actionable (2) by specifically naming the DOJ subpoena as the core reduce driver. 
+
+---
+
+## 25. EQIX — 2024-08-31
+
+- **Disclosure:** The 8-K disclosure of an independent investigation and subpoena from the U.S. Attorney's Office following a short seller report introduces significant legal and regulatory risk. Combined with declining cabinet utilization (82% to 77%) and inflationary pressures on power and materials, the disclosure sentiment is negative, indicating elevated risk relative to the universe.
+    - Audit Committee has commenced an independent investigation to review matters referenced in a recent short seller report and received a subpoena from the U.S. Attorney’s Office (8-K March 20, 2024)
+    - Cabinet utilization rates were approximately 77% and 82% as of June 30, 2024 and 2023, respectively (10-Q excerpt)
+    - Rising prices for materials, energy, gas, wages, and benefits costs negatively impact operating costs (10-K risk factors)
+- **Fundamentals:** Equinix exhibits strong financial health with low leverage (42.4%) and high interest coverage (8.0x), indicating solid solvency. The large market cap and low illiquidity (0.029) enhance resilience, while the high NAV premium (3.66) reflects market optimism. Despite moderate FFO yield (3.6%), the fundamentals support a favorable outlook.
+    - leverage: 0.4239
+    - interest_cover: 8.000403
+    - ln_mktcap: 25.092060
+    - amihud_illiq: 0.029065
+    - navprem_book_adj: 3.658821
+    - ffo_yield_proxy: 0.035648
+- **Macro:** Data center REITs benefit from structural demand drivers like cloud and AI, which offset the pressure from elevated interest rates (Fed funds at 5.33%, 10Y at 4.09%). The inverted yield curve (-0.20% spread) signals recession risk, but low unemployment (4.2%) and low inflation (2.94%) support tenant stability. Overall, the macro environment is mildly favorable for EQIX, though rate sensitivity remains a headwind.
+    - FEDFUNDS_lag1 at 5.33%, historically high
+    - DGS10_lag1 at 4.09%, elevated
+    - term_spread_10y_2y_lag1 at -0.20%, inverted
+    - cpi_yoy_lag1 at 2.94%, moderate inflation
+    - UNRATE_lag1 at 4.2%, low unemployment
+- **Price:** EQIX shows positive short-term momentum with 1-month and 3-month returns of 6.1% and 9.9%, but the 6-month return is negative (-5.1%), suggesting a recent recovery from a dip. High volatility (27.2%) indicates risk, while the shallow drawdown (-5.1%) limits downside concern. Overall, momentum is mildly positive but mixed, leading to a hold bias with a tilt toward increase.
+    - ret_1m: 0.061279
+    - ret_3m: 0.099197
+    - ret_6m: -0.051347
+    - ret_12m: 0.090449
+    - vol_annualized: 0.271885
+    - drawdown: -0.051347
+- **Aggregator:** The Disclosure agent highlights significant legal and regulatory risk from an independent investigation and subpoena, strongly advocating reduction. In contrast, the Fundamentals agent reports strong financial health with low leverage and high interest coverage, favoring increase. The Macro agent sees mild positive support from structural demand, while the Price agent observes mixed momentum leading to a hold bias. The consensus leans toward reduce due to the severity of legal risk, but the disagreement is substantial, resulting in a more balanced distribution with a hold component. Agreement score is low as agents diverge on the dominant signal.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) due to the mix of severe legal risk vs strong solvency metrics. Relevant (2) and actionable (2) as the rationale explicitly cites the subpoena and a drop in cabinet utilization (82% to 77%). 
+
+---
+
+## 26. ESS — 2025-07-31
+
+- **Disclosure:** The 10-Q states no material changes to risk factors, and the 8-K filings show routine debt refinancing and stable credit ratings. No adverse events or worsening risks are identified, suggesting neutral disclosure risk.
+    - 10-Q states no material changes to risk factors
+    - Issued $400M 5.375% senior notes due 2035 to repay upcoming maturities
+    - Credit ratings remain Baa1/Stable and BBB+/Stable
+- **Fundamentals:** Essex Property Trust exhibits strong financial health with very low leverage (4.9%), decent interest coverage (3.44x), and a NAV premium (1.43), indicating solid solvency and valuation support. The FFO yield of 3.1% is moderate but acceptable, and the large market cap (ln_mktcap=23.54) and low illiquidity (0.083) provide resilience. These factors suggest low financial risk.
+    - leverage: 0.049427
+    - interest_cover: 3.441765
+    - ffo_yield_proxy: 0.031062
+    - navprem_book_adj: 1.431946
+    - ln_mktcap: 23.540834
+- **Macro:** The macro environment is mixed for residential REITs. Elevated rates (Fed funds 4.33%, 10Y at 4.24%) increase financing costs, but the positive term spread (0.52%) and low unemployment (4.1%) support rental demand as homeownership remains expensive. With CPI moderating to 2.68%, the sector is likely to see stable performance with a slight upward bias.
+    - FEDFUNDS_lag1: 4.330000
+    - DGS10_lag1: 4.240000
+    - term_spread_10y_2y_lag1: 0.520000
+    - UNRATE_lag1: 4.100000
+    - cpi_yoy_lag1: 0.026805
+- **Price:** All return horizons are negative (1m -8.19%, 3m -5.95%, 6m -6.96%, 12m -3.25%), indicating sustained negative momentum. High annualized volatility (33.33%) and a deep drawdown (-15.93%) suggest distress, making a reduction likely.
+    - 1-month return: -0.081934
+    - 3-month return: -0.059487
+    - 6-month return: -0.069586
+    - 12-month return: -0.032549
+    - annualized volatility: 0.333305
+    - drawdown: -0.159313
+- **Aggregator:** The agents show strong disagreement: Fundamentals (increase=0.75) highlights low leverage, high interest coverage, and NAV premium, while Price (reduce=0.70) points to sustained negative momentum and high volatility. Macro is slightly positive but mixed, and Disclosure is neutral. Given the conflicting signals, the consensus leans slightly bearish with high uncertainty, reflecting low agreement.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) due to strong disagreement between negative momentum and exceptionally strong fundamentals. Tangential relevance (1) and fuzzy actionability (1) because the reduce case lacks concrete fundamental drivers. 
+
+---
+
+## 27. EXR — 2025-09-30
+
+- **Disclosure:** The risk factors in the 10-K and 10-Q are standard and unchanged. The 8-K filings detail routine events like earnings releases and an orderly CFO succession, with no material adverse developments. Overall disclosure is neutral with no signs of elevated risk.
+    - Risk factors include adverse economic conditions, competition, and cyberattacks, but no new or worsening risks
+    - 8-Ks report quarterly earnings and CFO retirement with a named successor, no negative surprises
+- **Fundamentals:** Extra Space Storage exhibits moderate leverage (D/E 1.00x) and solid interest coverage (4.91x), indicating manageable solvency risk. The FFO yield (5.48%) is healthy, and the NAV premium (1.73x) suggests market confidence. However, elevated idiosyncratic volatility (19.45%) and moderate liquidity (Amihud 0.06) temper the outlook, leading to an overall adequate financial health assessment.
+    - ffo_yield_proxy: 0.054811
+    - debt_to_equity: 1.002942
+    - interest_cover: 4.908275
+    - navprem_book_adj: 1.728442
+    - book_to_market: 0.466800
+    - ln_mktcap: 24.120422
+    - amihud_illiq: 0.060148
+    - idio_vol: 0.194541
+- **Macro:** Self-storage REITs are supported by low unemployment (4.3%) and positive term spread (0.64), indicating economic expansion and tenant demand. CPI at 2.94% is moderate, while elevated but flat rates (4.33% Fed funds) create manageable refinancing conditions. Overall macro is slightly favorable for EXR, though rate sensitivity limits upside.
+    - term_spread_10y_2y_lag1: 0.64 positive
+    - UNRATE_lag1: 4.3% low
+    - cpi_yoy_lag1: 2.94% moderate
+- **Price:** Negative returns across all time horizons (1m -0.75%, 3m -3.34%, 6m -2.98%, 12m -18.30%) with a deep drawdown of -27.59% indicate sustained negative momentum. Annualized volatility of 20.1% is moderate but the consistent negative performance and large drawdown suggest distress, leading to a high probability of reduction.
+    - ret_1m: -0.007460
+    - ret_3m: -0.033445
+    - ret_6m: -0.029773
+    - ret_12m: -0.183029
+    - drawdown: -0.275935
+- **Aggregator:** The Disclosure and Macro agents suggest a neutral to slightly positive outlook, while Fundamentals indicate adequate health. However, the Price agent's strong negative momentum and deep drawdown present a significant bearish signal. The consensus is tilted toward reduction due to the persistence of negative price trends, but tempered by stable fundamentals and macro conditions. Agreement is low due to the sharp divergence between price momentum and fundamental strength.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) as bearish price momentum diverges from adequate fundamentals and favorable macro. Tangential relevance (1) and fuzzy actionability (1) due to reliance on negative returns as the main driver. 
+
+---
+
+## 28. EXR — 2025-07-31
+
+- **Disclosure:** Disclosure language is largely standard and unchanged from prior filings, with no new material risk factors or negative events. The company completed a $500 million senior notes offering to repay credit lines and announced an orderly CFO retirement, which are neutral to slightly positive actions. Overall risk appears consistent with the peer universe.
+    - Issued $500 million of 5.400% Senior Notes due 2035 to repay credit lines and commercial paper (8-K 2025-03-19).
+    - CFO P. Scott Stubbs to retire effective Dec 31, 2025; Jeff Norman appointed successor (8-K 2025-05-19).
+    - 10-K and 10-Q risk factors unchanged, with standard REIT and operational risks.
+- **Fundamentals:** EXR exhibits strong financial health with a healthy FFO yield of 5.75%, solid interest coverage of 4.91x, moderate debt-to-equity of 1.00, and a NAV premium of 1.65 indicating market confidence. Large market cap ($28.5B) and low illiquidity (0.07) further support resilience.
+    - ffo_yield_proxy: 0.057495
+    - interest_cover: 4.908275
+    - debt_to_equity: 1.002942
+    - navprem_book_adj: 1.647747
+    - ln_mktcap: 24.072611
+    - amihud_illiq: 0.069187
+- **Macro:** Self-storage REITs face headwinds from elevated interest rates (Fed funds at 4.33%, 10Y at 4.24%) which increase refinancing costs. However, low unemployment (4.1%) and moderate inflation (2.68%) support stable demand from household moves. The flat yield curve (term spread 0.52%) suggests limited recession risk, making the sector relatively resilient. Overall, the macro environment is mixed, leading to a neutral-to-slightly-negative bias.
+    - FEDFUNDS_lag1: 4.330000
+    - DGS10_lag1: 4.240000
+    - term_spread_10y_2y_lag1: 0.520000
+    - cpi_yoy_lag1: 0.026805
+    - UNRATE_lag1: 4.100000
+- **Price:** All return horizons (1m, 3m, 6m, 12m) are negative, indicating sustained negative momentum. High annualized volatility (0.400251) and deep drawdown (-0.317338) suggest elevated risk and potential distress. The combination strongly supports a reduce recommendation.
+    - ret_1m: -0.088714
+    - ret_3m: -0.072953
+    - ret_6m: -0.107981
+    - ret_12m: -0.122493
+    - vol_annualized: 0.400251
+    - drawdown: -0.317338
+- **Aggregator:** The Price agent shows strong negative momentum (all horizons negative, high volatility, deep drawdown), while the Macro agent notes elevated interest rates creating headwinds, leading both to reduce/hold. In contrast, the Fundamentals agent reports strong financial health (healthy FFO yield, solid interest coverage, low illiquidity), supporting an increase. The Disclosure agent is neutral. The consensus leans reduce due to persistent price declines and macro pressures, but the fundamental strength introduces significant uncertainty, resulting in moderate disagreement and a cautious hold component.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) as strong negative momentum and macro headwinds conflict with strong financial health. Relevance (1) and Actionability (1) because the driver is generic macro/momentum without specific fundamental distress. 
+
+---
+
+## 29. EXR — 2025-11-30
+
+- **Disclosure:** The risk factors in the 10-K and 10-Q are standard boilerplate with no new or worsening risks. The 8-K filings show routine capital market activities (debt issuance and credit facility amendment), indicating stable access to financing. No impairments, covenant concerns, or material litigation are disclosed.
+    - Risk factors in 10-K and 10-Q are identical boilerplate, no new risks.
+    - 8-K filings: debt issuance of $800M senior notes and credit facility amendment, routine.
+- **Fundamentals:** Extra Space Storage shows strong financial health with interest coverage of 4.9, debt-to-equity of 1.0, and FFO yield of 5.8%. The NAV premium of 1.63 and large market cap ($27B) indicate market confidence and resilience. Liquidity (Amihud 0.076) and idiosyncratic volatility (0.167) are moderate, not signaling distress.
+    - ffo_yield_proxy: 0.058009
+    - debt_to_equity: 1.002942
+    - interest_cover: 4.908275
+    - navprem_book_adj: 1.633154
+    - ln_mktcap: 24.063715
+    - amihud_illiq: 0.076395
+    - idio_vol: 0.166837
+- **Macro:** Self storage REITs are moderately rate-sensitive but benefit from structural demand due to housing dislocation. Current high Fed funds rate (4.09%) raises financing costs, but low unemployment (4.4%) and moderate inflation (2.73%) support stable occupancy and pricing power. The positive yield curve (0.51%) suggests no imminent recession, favoring a hold stance.
+    - Fed funds rate 4.09%
+    - 10-year yield 4.11%
+    - 2-year yield 3.60%
+    - term spread 0.51%
+    - CPI YoY 2.73%
+    - unemployment 4.4%
+- **Price:** All return horizons are negative, with the 12-month return at -18.6% and deep drawdown of -31.6%. High annualized volatility (21.7%) accentuates risk. Consistent negative momentum across short and long terms indicates strong downward pressure, favoring reduction.
+    - 1-month return: -0.0028
+    - 3-month return: -0.0622
+    - 6-month return: -0.0994
+    - 12-month return: -0.1864
+    - drawdown: -0.3159
+    - volatility: 0.2175
+- **Aggregator:** Disclosure and Macro agents indicate neutral to modestly positive conditions, while Price agent reports strong negative momentum and Fundamentals agent reports strong financial health. The significant disagreement between price action and fundamentals creates high uncertainty, leading to a consensus that leans slightly toward reduction due to persistent negative returns, but with a balanced view overall.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) due to high uncertainty between bearish price and strong fundamentals. Tangential relevance (1) and fuzzy actionability (1) as the rationale is driven heavily by generalized price declines. 
+
+---
+
+## 30. INVH — 2025-11-30
+
+- **Disclosure:** The 8-K filings indicate a $600M debt issuance and the resignation of the President, which may signal management changes and increased leverage. The risk factors cite inflation, interest rates, and regulatory pressures, consistent with a cautious outlook. However, no material adverse events or going-concern issues are noted.
+    - 4.950% Senior Notes due 2033 for $600 million (8-K dated August 12, 2025)
+    - Charles D. Young resigned as President effective September 1, 2025 (8-K dated July 20, 2025)
+- **Fundamentals:** INVH shows moderate leverage (43.9%) and interest coverage of 2.36x, which is adequate but not strong. FFO yield of 2.6% is modest, while the NAV premium of 18.1% suggests market optimism. The firm is large and liquid, with low illiquidity (0.08). Overall financial health is adequate.
+    - leverage: 0.438603
+    - interest_cover: 2.361246
+    - ffo_yield_proxy: 0.026272
+    - navprem_book_adj: 1.181299
+    - amihud_illiq: 0.081844
+    - ln_mktcap: 23.572691
+- **Macro:** Elevated mortgage rates (10Y at 4.11%) support rental demand for single-family homes as homeownership becomes less affordable. However, high interest rates increase borrowing costs. The positive yield curve (term spread 0.51%) and moderate inflation (2.73% yoy) indicate a stable environment, favoring continued demand for SFR properties.
+    - 10Y Treasury rate at 4.11%
+    - CPI yoy at 2.73%
+    - Unemployment rate at 4.4%
+- **Price:** Negative returns across 3-month, 6-month, and 12-month horizons coupled with high volatility (19.6%) and a deep drawdown (-29.6%) indicate significant distress and negative momentum. The slight positive 1-month return is insufficient to offset the broader downtrend.
+    - ret_3m: -0.089716
+    - ret_12m: -0.146275
+    - drawdown: -0.296084
+    - vol_annualized: 0.196212
+- **Aggregator:** The Disclosure and Price agents are bearish, citing management changes, debt issuance, and strong negative momentum, while the Macro agent is bullish due to high mortgage rates supporting rental demand. The Fundamentals agent is neutral with adequate financial health. The consensus leans toward hold/reduce as the bearish signals from price and disclosure outweigh the macro optimism, but disagreement among agents results in moderate uncertainty.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) because negative price/disclosure clashes with bullish macro. Relevant (2) and actionable (2) as it ties the reduce call to specific events like the President's resignation and a $600M debt issuance. 
+
+---
+
+## 31. INVH — 2024-12-31
+
+- **Disclosure:** The risk factor disclosures are extensive but typical for a single-family rental REIT, with no new material adverse risks identified. Recent 8-K filings show refinancing of credit facilities with increased capacity and a securitization, indicating stable capital market access and proactive liability management. Overall sentiment is neutral.
+    - 10-K Item 1A lists risks related to economic conditions, supply chain, labor inflation, fixed costs, interest rates, and regulatory changes.
+    - 8-K dated September 9, 2024: Amendment and restatement of credit agreement, increasing revolving facility to $1.25B and term loan to $3.0B, with total capacity up to $4.0B.
+    - 8-K dated September 5, 2024: Securitization transaction by joint venture SFR Javelin Venture LLC with a $891.9M loan secured by 2,600 homes.
+- **Fundamentals:** Invitation Homes shows moderate leverage (0.445) and debt-to-equity (0.889), but interest coverage of 2.558 is below the typical safety threshold of 3x, indicating some earnings vulnerability. The FFO yield of 2.66% is modest, while the NAV premium of 1.357 suggests market optimism. Large market cap (ln_mktcap 23.7) and moderate liquidity (amihud_illiq 0.091) provide resilience, but the low coverage and modest yield warrant a cautious hold.
+    - leverage: 0.444621
+    - interest_cover: 2.557832
+    - ffo_yield_proxy: 0.026552
+    - navprem_book_adj: 1.356875
+    - ln_mktcap: 23.696973
+- **Macro:** High interest rates support rental demand as homeownership becomes less affordable, benefiting single-family rental REITs. However, elevated financing costs and a flat yield curve create uncertainty; moderating CPI suggests potential rate cuts ahead, balancing risks.
+    - FEDFUNDS_lag1: 4.64%
+    - DGS10_lag1: 4.18%
+    - DGS2_lag1: 4.13%
+    - term_spread_10y_2y_lag1: 0.05%
+    - cpi_yoy_lag1: 2.72%
+    - UNRATE_lag1: 4.2%
+- **Price:** All returns are negative across 1, 3, 6, and 12-month horizons, with a deep drawdown of -22.35% from peak. The volatility is moderate at 15.79% annualized, but the persistent negative momentum and drawdown indicate strong bearish pressure. Thus, reducing exposure is strongly favored.
+    - ret_1m: -0.058196
+    - ret_3m: -0.085174
+    - ret_6m: -0.094103
+    - ret_12m: -0.031252
+    - drawdown: -0.223462
+- **Aggregator:** Disclosure and Macro agents suggest a neutral-to-positive outlook based on stable capital access and high interest rates supporting rental demand, while Price agent strongly indicates bearish momentum with negative returns across all horizons and a deep drawdown. Fundamentals agent shows adequate but not strong financial health, with low interest coverage and modest FFO yield. The consensus leans toward reduce due to persistent bearish price action, but significant disagreement from other agents prevents a stronger conviction.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) as negative momentum is mixed with neutral-to-positive macro and stable disclosure. Tangential relevance (1) and fuzzy actionability (1) because the primary driver is price action, though low coverage is noted. 
+
+---
+
+## 32. KIM — 2024-04-30
+
+- **Disclosure:** The filings show proactive capital management through a special dividend and share repurchase authorization, along with the successful completion of the RPT merger, which expands the portfolio. However, risk factors acknowledge macroeconomic headwinds such as inflation, elevated interest rates, and potential recession, which temper the positive outlook. Overall, the disclosure is balanced, leading to a neutral sentiment.
+    - Special dividend of $0.09 per share declared on November 13, 2023 (8-K)
+    - Completion of RPT merger on January 2, 2024, adding 56 shopping centers (8-K)
+    - Extension of share repurchase program for up to $300 million on February 8, 2024 (8-K)
+    - Risk factors discuss inflation, interest rate increases, tenant bankruptcies, and potential impairment charges (10-K, 10-Q)
+- **Fundamentals:** KIM exhibits moderate leverage (0.40), strong interest coverage (5.64x), and a healthy FFO yield (9.27%). Its large market cap and moderate liquidity indicate resilience, with only a modest NAV discount (0.938). These fundamentals suggest solid financial health.
+    - leverage: 0.397444
+    - interest_cover: 5.642419
+    - ffo_yield_proxy: 0.092655
+    - navprem_book_adj: 0.937754
+    - ln_mktcap: 23.251887
+- **Macro:** The inverted yield curve (-0.39 spread) and elevated Fed Funds rate (5.33%) signal potential recessionary pressures that could weaken consumer spending and increase financing costs for retail properties. While Kimco's necessity-anchored focus provides some resilience, the macro headwinds from high rates and inverted curve outweigh sector-specific supports, making a reduction more likely.
+    - Fed Funds rate at 5.33% (high)
+    - 10Y-2Y spread at -0.39% (inverted)
+    - CPI YoY at 3.49% (above target)
+    - Unemployment at 3.9% (low but rising trend)
+- **Price:** Recent short-term returns are negative (1m -5.0%, 3m -6.6%), while longer-term returns are positive but modest (6m 6.8%, 12m 2.4%). High annualized volatility (27.8%) and a deep drawdown of -19.2% signal risk and potential distress, outweighing the positive multi-month momentum. Overall momentum is mildly negative.
+    - ret_1m: -0.049975
+    - ret_3m: -0.066337
+    - vol_annualized: 0.277654
+    - drawdown: -0.191769
+- **Aggregator:** Majority of agents (Macro and Price) point to recessionary macro conditions and negative price momentum suggesting downside risk, while Fundamentals highlights strong financial health and leverage. Disclosure is neutral. The evidence from fundamentals is robust but outweighed by macro and price signals, leading to a moderate consensus toward reduce with notable uncertainty.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) because negative macro/price signals clash with strong financial health. Relevance (1) and actionability (1) are low as the driver relies mostly on generic macro indicators (inverted curve, high rates). 
+
+---
+
+## 33. O — 2025-01-31
+
+- **Disclosure:** The 10-K risk factors are standard for a net lease REIT, covering competition, client credit, environmental liability, and REIT qualification. The 10-Q confirms no material changes. Recent 8-K filings indicate routine debt issuance and preferred stock redemption, which are not indicative of elevated risk. Overall disclosure suggests neutral risk relative to peers.
+    - 10-K includes typical risk factors such as competition for acquisitions and client bankruptcy risks.
+    - 10-Q states no material changes to risk factors.
+    - 8-K filings show $500M note issuance, £700M note issuance, and Series A preferred redemption.
+- **Fundamentals:** Low leverage (6.88%), high interest coverage (4.79), and healthy FFO yield (5.88%) indicate strong solvency and cash earnings. Large market cap ($47B) and low illiquidity (0.045) suggest resilience. No deep NAV discount (premium of 1.205).
+    - leverage: 0.068796
+    - interest_cover: 4.788881
+    - ffo_yield_proxy: 0.058818
+    - ln_mktcap: 24.574515
+- **Macro:** High interest rates (FEDFUNDS 4.48%, DGS10 4.58%) increase discount rates for net lease REITs' long-duration cash flows, pressuring valuations and refinancing. Moderate inflation (CPI 2.87%) and low unemployment (4.1%) provide some support through rent escalations and tenant stability, but rate sensitivity dominates.
+    - FEDFUNDS_lag1: 4.480000
+    - DGS10_lag1: 4.580000
+    - term_spread_10y_2y_lag1: 0.330000
+    - cpi_yoy_lag1: 0.028707
+- **Price:** Recent 1-month return is positive, but 3-month and 6-month returns are negative, indicating a short-term bounce in a medium-term downtrend. High volatility (23.1%) and a deep drawdown (-16.0%) suggest elevated risk. Overall momentum is mildly negative, favoring a reduction.
+    - ret_1m: 0.028111
+    - ret_3m: -0.066711
+    - ret_6m: -0.022555
+    - vol_annualized: 0.231434
+    - drawdown: -0.159934
+- **Aggregator:** The Disclosure agent indicates neutral risk, while Macro and Price agents signal bearishness due to rising rates and negative medium-term momentum. In contrast, the Fundamentals agent sees strong financial health and a bullish outlook. The stark disagreement between Fundamentals and Macro/Price suggests a balanced but slightly cautious consensus, leaning toward reduction.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) due to stark disagreement between strong fundamentals and bearish macro/price. Tangential relevance (1) and fuzzy actionability (1) as the downside risk is driven by generic rate sensitivity. 
+
+---
+
+## 34. O — 2024-07-31
+
+- **Disclosure:** The 10-K risk factors are standard for a net lease REIT, and the 10-Q confirms no material changes. Recent 8-Ks show routine events: a director's retirement without disagreement, shelf registration for capital flexibility, and earnings releases. No adverse events or worsening risk language detected. Sentiment is neutral.
+    - 10-Q states no material changes to risk factors since 10-K.
+    - 8-K on Feb 12, 2024 reports director retirement without disagreement.
+    - 8-K on Feb 16, 2024 files shelf registration statement, indicating capital market access.
+    - 8-K on Feb 20, 2024 and May 6, 2024 report earnings results with no negative surprises.
+- **Fundamentals:** Realty Income exhibits strong financial health with very low leverage (6.88%), robust interest coverage (4.79x), and a healthy FFO yield (5.60%). The NAV premium (1.27x) and large market cap (ln 24.62) indicate market confidence and liquidity. These metrics suggest low distress risk, supporting an increase in allocation.
+    - leverage: 0.068796
+    - interest_cover: 4.788881
+    - ffo_yield_proxy: 0.055960
+    - navprem_book_adj: 1.266819
+    - ln_mktcap: 24.624316
+- **Macro:** The net lease sector is highly sensitive to interest rates due to its long-duration income streams. With the federal funds rate at 5.33% and the yield curve inverted (10Y-2Y spread of -0.35), refinancing and discount rate pressures weigh heavily on valuations. Although low CPI inflation (2.97%) and stable unemployment (4.1%) provide modest support, the prevailing rate environment is unfavorable for net lease REITs, justifying a reduce bias.
+    - FEDFUNDS_lag1: 5.33%
+    - term_spread_10y_2y_lag1: -0.35%
+    - cpi_yoy_lag1: 2.97%
+- **Price:** Over the past 1, 3, and 6 months, Realty Income delivered returns of 9.27%, 8.34%, and 8.20% respectively, indicating strong short-term positive momentum. However, the 12-month return is slightly negative at -0.62%, and the drawdown of -14.05% suggests recent recovery from a prior decline. Annualized volatility is moderate at 15.52%. Overall, the risk-adjusted momentum is cautiously positive, favoring an incremental increase but not a strong buy.
+    - ret_1m: 0.092718
+    - ret_3m: 0.083393
+    - ret_6m: 0.082025
+    - ret_12m: -0.006239
+    - drawdown: -0.140549
+    - vol_annualized: 0.155218
+- **Aggregator:** The Macro agent's reduce bias due to unfavorable interest rate environment is strong and sector-specific, while the Fundamentals agent's increase bias based on strong financial health is also compelling. Price and Disclosure agents provide mixed signals: mild positive momentum and neutral disclosure. Given the dominant headwind from rates, a slight reduce tilt is warranted, though the strong fundamentals prevent an aggressive sell. Agreement is low due to opposing views between Macro and Fundamentals.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) because the strong fundamentals and positive short-term price conflict with the macro rate headwinds. Relevant (1) and actionable (1) as the reduce tilt relies entirely on generic macro sensitivity. 
+
+---
+
+## 35. O — 2024-04-30
+
+- **Disclosure:** The 10-Q prominently features risks from the pending merger with Spirit Realty, including integration challenges, dilution, and potential failure, which introduces significant uncertainty. While the 10-K risk factors are standard and the 8-K announcing a data center JV is positive, the merger risks dominate and suggest increased downside risk relative to peers.
+    - 10-Q risk factors highlight merger-related risks such as integration difficulties, dilution, and potential failure to consummate.
+    - 8-K on November 13, 2023 announces joint venture with Digital Realty for data center development in Northern Virginia.
+    - 10-K risk factors include standard industry risks like client defaults and competition.
+- **Fundamentals:** Realty Income exhibits strong financial health with very low leverage of 6.9%, high interest coverage of 4.8x, and a healthy FFO yield of 6.0%. Its NAV premium of 18.1% and large market cap ($46B) indicate robust valuation and liquidity, while low idiosyncratic volatility and illiquidity further reduce risk.
+    - leverage: 0.068796
+    - interest_cover: 4.788881
+    - ffo_yield_proxy: 0.060026
+    - navprem_book_adj: 1.181012
+    - ln_mktcap: 24.554178
+    - amihud_illiq: 0.032018
+    - idio_vol: 0.098438
+- **Macro:** Net lease REITs are highly sensitive to interest rates due to long-duration income streams. With the federal funds rate at 5.33% and an inverted yield curve (10Y-2Y spread of -0.39%), the cost of capital is elevated and refinancing risk is high. CPI inflation at 3.49% remains above target, limiting near-term rate relief, while the inverted curve signals potential economic weakness that could pressure tenant credit. These factors collectively suggest a challenging environment for Realty Income, warranting a reduction bias.
+    - FEDFUNDS_lag1: 5.330000
+    - term_spread_10y_2y_lag1: -0.390000
+    - cpi_yoy_lag1: 0.034868
+- **Price:** Recent 1-month and 3-month returns are near zero, while the 6-month return is strong at +16.25%. However, the 12-month return is negative (-9.86%) and the drawdown is deep at -20.67%, suggesting the REIT is still recovering. Volatility is moderate at 20.96%. Overall, momentum is mixed with no clear directional bias.
+    - 1-month return: -0.56%
+    - 3-month return: -0.13%
+    - 6-month return: 16.25%
+    - 12-month return: -9.86%
+    - drawdown: -20.67%
+    - annualized volatility: 20.96%
+- **Aggregator:** Significant disagreement: Disclosure and Macro highlight merger and interest rate risks favoring reduce, while Price cites mixed momentum for hold. Fundamentals strongly favors increase based on robust financial health. Given conflicting signals, consensus leans mildly toward reduce with high uncertainty.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) due to strong fundamentals clashing with merger risks and high rates. Relevant (2) and actionable (2) because it explicitly points to integration challenges and dilution from the pending Spirit Realty merger. 
+
+---
+
+## 36. PLD — 2024-06-30
+
+- **Disclosure:** The 10-K highlights strong demand drivers and a 57% lease mark-to-market, indicating embedded growth, but the 10-Q notes short-term leasing delays due to economic uncertainty. Multiple 8-Ks show routine debt issuances and earnings releases, with no material adverse events. The disclosure is balanced, leading to a neutral sentiment.
+    - Lease mark-to-market of approximately 57% from the 10-K
+    - Short-term delay in customers' leasing decisions due to economic and geopolitical uncertainty from the 10-Q
+    - Issuance of $800M 2034 notes and $450M 2054 notes in January 2024 from 8-K
+- **Fundamentals:** Prologis exhibits low leverage (31.2%) and strong interest coverage (7.14x), indicating solid solvency. Its FFO yield of 3.79% is moderate, while a NAV premium of 1.627 and low book-to-market (0.512) suggest favorable valuation. Large size (ln_mktcap 25.37) and low illiquidity (0.022) support resilience, though idiosyncratic volatility (0.205) is somewhat elevated. Overall financial health is strong.
+    - leverage: 0.311763
+    - interest_cover: 7.142820
+    - ffo_yield_proxy: 0.037927
+    - navprem_book_adj: 1.627191
+    - book_to_market: 0.511986
+    - ln_mktcap: 25.366439
+    - amihud_illiq: 0.022297
+    - idio_vol: 0.205367
+- **Macro:** High interest rates (FEDFUNDS 5.33%) and an inverted yield curve (term spread -0.38%) signal tight financial conditions that pose headwinds to economic activity, potentially dampening industrial tenant demand. However, resilient structural demand from e-commerce and supply chain reshoring provides some offset, preventing an outright negative outlook.
+    - FEDFUNDS_lag1: 5.330000
+    - term_spread_10y_2y_lag1: -0.380000
+    - DGS10_lag1: 4.510000
+    - DGS2_lag1: 4.890000
+- **Price:** Positive 1-month return of 2.5% suggests short-term bounce, but negative 3-month, 6-month, and 12-month returns indicate persistent downward momentum. A deep drawdown of -28.5% and moderate annualized volatility of 18% point to ongoing weakness rather than recovery. Overall, the price signals lean cautious with a bias toward further decline.
+    - ret_1m: 0.025237
+    - ret_3m: -0.130100
+    - drawdown: -0.285215
+- **Aggregator:** The Disclosure agent provides a neutral outlook, citing balanced fundamentals and short-term delays. The Macro agent warns of high interest rates and inverted yield curve, favoring reduce. The Price agent confirms negative momentum, also favoring reduce. In contrast, the Fundamentals agent strongly supports increase with low leverage and strong financial health. The majority lean reduce but the strength of Fundamentals' evidence tempers the bearishness, resulting in a cautious consensus with moderate disagreement.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) as negative momentum and macro headwinds conflict with strong financial health (31.2% leverage). Tangential relevance (1) and fuzzy actionability (1) because the driver is primarily macro/price. 
+
+---
+
+## 37. PSA — 2024-02-29
+
+- **Disclosure:** The 10-Q and 8-K filings indicate softening demand and declining rental rates for new move-ins, with same-store revenue growth decelerating. The large Simply Storage acquisition and debt issuance introduce integration and interest expense risks. While risk factors are boilerplate, the operating trends suggest elevated risk relative to peers.
+    - 10-Q: 'demand and operating trends softened in the second half of 2022 continuing through 2023 as compared to what we experienced in 2020 and 2021'
+    - 10-Q: 'we expect these trends to lead to moderating levels of income growth through 2023'
+    - 8-K Jan 9, 2024: 'average annual contract rent per square foot for customers moving in during the month of December 2023 decreased 11.2%'
+    - 8-K Sep 13, 2023: completed acquisition of Simply Storage for $2.2 billion, funded by debt issuance
+- **Fundamentals:** Public Storage exhibits strong financial health with low leverage (45.95%), exceptionally high interest coverage (16.5x), and a healthy FFO yield of 6.25%. Its large market cap ($45.4B) and low illiquidity (0.06) indicate resilience, while the NAV premium (2.57x) reflects market confidence in its asset quality.
+    - leverage: 0.459548
+    - interest_cover: 16.504161
+    - ffo_yield_proxy: 0.062526
+    - navprem_book_adj: 2.565886
+    - ln_mktcap: 24.632756
+    - amihud_illiq: 0.060293
+- **Macro:** Low unemployment (3.7%) supports near-term self-storage demand from household moves and life events. However, an inverted yield curve (-0.28) historically signals recession, and elevated rates (Fed funds 5.33%) may slow housing turnover and future demand. Self storage is defensive but not immune to a downturn. Overall, mixed signals lean neutral with a slight negative tilt.
+    - term_spread_10y_2y_lag1: -0.28 (inverted curve)
+    - UNRATE_lag1: 3.7% (low unemployment)
+    - cpi_yoy_lag1: 3.09% (inflation still above target)
+- **Price:** Short to medium term returns are positive (1m: +0.24%, 3m: +10.91%, 6m: +4.97%), but the 12-month return is slightly negative (-0.90%) and the drawdown is nearly 20%, suggesting recent recovery but lingering weakness. Volatility is moderate (23%). Overall, momentum is mildly upward but not strong enough to warrant aggressive increase.
+    - 1-month return: +0.24%
+    - 3-month return: +10.91%
+    - 6-month return: +4.97%
+    - 12-month return: -0.90%
+    - drawdown: -19.47%
+    - volatility: 23.0%
+- **Aggregator:** The Disclosure and Macro agents both highlight weakening demand and recession signals (e.g., declining rental rates, inverted yield curve), while Fundamentals points to strong financial health. Price shows mild short-term recovery but long-term weakness. The consensus leans toward a higher probability of reducing exposure given operational risks, but the disagreements from Fundamentals and Price prevent a stronger bearish tilt.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) as softening demand/disclosure risk clashes with exceptionally strong solvency. Relevant (2) and actionable (2) by naming a specific operational driver: a 11.2% decrease in new move-in contract rent. 
+
+---
+
+## 38. SPG — 2024-09-30
+
+- **Disclosure:** The disclosure of CEO David Simon's cancer treatment introduces key-person risk, which is a negative factor. However, the completed sale of Authentic Brands Group for $1.5 billion provides a positive cash inflow. The 10-Q indicates no material changes to risk factors, and the 10-K outlines standard retail risks. Overall, the new CEO health risk outweighs the positive monetization event, leading to a negative sentiment.
+    - David Simon disclosed cancer treatment in an 8-K filed on May 29, 2024, stating he intends to continue serving as CEO and President.
+    - The Company completed the sale of its interest in Authentic Brands Group in February 2024, generating $1.5 billion in cash proceeds.
+    - Latest 10-Q states no material changes to risk factors from the 2023 10-K.
+- **Fundamentals:** Extremely high leverage of 0.759 and debt-to-equity of 10.122 indicate severe financial risk despite low illiquidity (0.030) and moderate idiosyncratic volatility (0.164). The absence of interest coverage and FFO yield data prevents a full assessment, but the available solvency metrics point to stress.
+    - leverage: 0.759357
+    - debt_to_equity: 10.121594
+    - amihud_illiq: 0.030118
+    - idio_vol: 0.164498
+- **Macro:** The macro environment shows a flat yield curve (0.00 spread) and elevated rates (Fed funds 5.33%), which creates uncertainty for retail REITs. However, low unemployment (4.2%) and moderate inflation (2.6%) support consumer spending and retail demand, allowing for a cautious hold stance.
+    - term_spread_10y_2y_lag1: 0.000000
+    - FEDFUNDS_lag1: 5.330000
+    - UNRATE_lag1: 4.200000
+    - cpi_yoy_lag1: 0.026071
+- **Price:** All return horizons are positive with particularly strong 12-month momentum (64.98%). Volatility is moderate at 14.68% and drawdown is zero, indicating no recent distress. The consistent uptrend across time frames supports a bullish outlook.
+    - ret_1m: 0.022724
+    - ret_3m: 0.127490
+    - ret_6m: 0.108110
+    - ret_12m: 0.649797
+    - vol_annualized: 0.146758
+    - drawdown: 0.000000
+- **Aggregator:** The Price agent shows strong bullish momentum (12-month return 65%), while Disclosure (key-person risk) and Fundamentals (extreme leverage 0.76, debt-to-equity 10.12) are bearish. Macro is neutral. The majority bearish signals outweigh the momentum, leading to a reduce-leaning consensus with moderate uncertainty due to the Price agent's dissent.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) because bearish fundamentals and key-person risk clash with very strong price momentum. Relevant (2) and actionable (2) by explicitly naming the CEO's cancer treatment and 10.12 debt-to-equity ratio as drivers. 
+
+---
+
+## 39. SPG — 2024-12-31
+
+- **Disclosure:** The 8-K filings reveal two significant positive events: the closure of the ABG transaction yielding $1.5B cash proceeds and the extension of the $3.5B revolving credit facility to 2029, indicating strong liquidity and financial flexibility. The 10-K risk factors are standard for retail REITs, and the 10-Q notes no material changes, suggesting no new risks. The overall disclosure sentiment leans positive due to these catalysts, though retail sector headwinds remain.
+    - 8-K Filing 2: Sale of Authentic Brands Group completed on February 28, 2024, resulting in $1.5 billion cash proceeds.
+    - 8-K Filing 3: Amendment and extension of $3.5 billion senior unsecured revolving credit facility to January 31, 2029.
+    - 10-Q: No material changes to risk factors since the 2023 10-K.
+- **Fundamentals:** High leverage (0.76) and extremely high debt-to-equity (10.12) indicate significant solvency risk, while interest coverage and FFO yield are unavailable, leaving no offsetting strengths. Elevated idiosyncratic volatility (0.11) further supports a stressed financial health assessment.
+    - leverage: 0.759357
+    - debt_to_equity: 10.121594
+    - idio_vol: 0.113825
+- **Macro:** Retail REITs face headwinds from elevated interest rates (Fed funds 4.64%) and a flat yield curve (10Y-2Y spread 0.05), which increase financing costs and cap rates. However, moderate CPI inflation (2.72%) and low unemployment (4.2%) support consumer spending, providing a floor for retail demand. Overall, the macro environment is mixed, leading to a neutral-to-cautious outlook.
+    - FEDFUNDS_lag1: 4.640000
+    - term_spread_10y_2y_lag1: 0.050000
+    - cpi_yoy_lag1: 0.027195
+    - UNRATE_lag1: 4.200000
+- **Price:** Strong positive momentum over 6- and 12-month horizons (16.20% and 26.92%) with moderate volatility (22.60%), but the recent 1-month return of -5.12% and drawdown of -5.12% indicate a short-term pullback. Overall trend remains positive, supporting a mild up bias.
+    - ret_1m: -0.051199
+    - ret_6m: 0.162043
+    - ret_12m: 0.269211
+    - vol_annualized: 0.225981
+    - drawdown: -0.051199
+- **Aggregator:** Disclosure highlights strong liquidity from ABG sale and credit facility extension, but Fundamentals signals severe leverage and debt risks. Macro and Price provide mixed neutral-to-mildly positive signals. The fundamental concerns tip the consensus toward reduction, though positive disclosure events prevent an outright bearish stance. Agreement is low due to conflicting evidence.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) as severe leverage risks clash with positive disclosure events and positive price. Relevant (2) and actionable (2) because the core reduce driver explicitly cites the extreme 10.12 debt-to-equity ratio. 
+
+---
+
+## 40. SPG — 2024-01-31
+
+- **Disclosure:** The 10-K risk factors are standard for a retail REIT, discussing tenant bankruptcies and retail environment pressures, but no new material risks were introduced. The 10-Q confirms no material changes to risk factors. The 8-K filings include routine earnings releases and a governance item (say-on-pay vote not in favor leading to an amended incentive plan), which is a minor concern but not indicative of heightened risk. Overall disclosure sentiment is neutral.
+    - 10-K Item 1A discusses risks from tenant bankruptcies, anchor store dependence, and retail environment conditions.
+    - 10-Q states there were no material changes to risk factors from the 2022 Annual Report.
+    - 8-K Filing 3 (Nov 8, 2023) reports that the say-on-pay vote did not receive a majority of votes cast, leading to adoption of an amended incentive program.
+- **Fundamentals:** High leverage (0.756) and extreme debt-to-equity (9.3) indicate significant solvency risk. Elevated idiosyncratic volatility (0.132) and moderate illiquidity (0.037) add to financial fragility. With critical coverage and yield metrics unavailable, the observed fundamentals point to a stressed financial condition, warranting a reduction bias.
+    - leverage: 0.756114
+    - debt_to_equity: 9.299716
+    - idio_vol: 0.131747
+    - amihud_illiq: 0.037467
+- **Macro:** Inverted yield curve and elevated interest rates signal potential economic slowdown, which pressures consumer spending and retail tenants. While unemployment remains low, the macro headwinds suggest caution for retail REITs, favoring a reduction in exposure.
+    - term_spread_10y_2y_lag1: -0.35 (inverted curve)
+    - FEDFUNDS_lag1: 5.33% (elevated rates)
+    - cpi_yoy_lag1: 3.32% (persistent inflation)
+- **Price:** Strong positive momentum over 3-, 6-, and 12-month horizons (27.98%, 14.76%, 14.86%) is tempered by a slight negative return in the past month (-2.83%) and a moderate drawdown of -9.48%. Volatility is moderate at 16.87%, suggesting the uptrend is not excessively risky. Overall, the trend is mildly positive but warrants caution given short-term weakness.
+    - 3-month return: 27.98%
+    - 1-month return: -2.83%
+    - 6-month return: 14.76%
+    - 12-month return: 14.86%
+    - drawdown: -9.48%
+    - annualized volatility: 16.87%
+- **Aggregator:** The Macro and Fundamentals agents strongly favor reduction due to inverted yield curve, elevated rates, and high leverage/debt ratios. Disclosure remains neutral with no material new risks. Price shows mild positive momentum but short-term weakness. The consensus leans bearish with moderate disagreement, as Price's bullish signals are outweighed by macro and fundamental headwinds.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) as high leverage and macro headwinds conflict with strong long-term price momentum. Relevant (2) and actionable (2) due to citing specific fundamental distress numbers (0.756 leverage, 9.3 D/E). 
+
+---
+
+## 41. VICI — 2024-06-30
+
+- **Disclosure:** The 10-K risk factors are largely boilerplate and standard for a gaming net lease REIT, with no new or worsening risks identified. The 10-Q and 8-K filings show proactive debt management via refinancing of near-term maturities with longer-dated notes, and the company remains 100% leased with a weighted average lease term of 41.3 years, indicating stability. Overall sentiment is neutral with a slight positive tilt from the refinancing activity.
+    - 100% leased with weighted average lease term of approximately 41.3 years (10-K)
+    - Issuance of $550 million 5.750% Senior Notes due 2034 and $500 million 6.125% Senior Notes due 2054 to refinance $1,024.2 million of 5.625% notes due 2024 and $25.8 million due 2024 (8-K filings March 2024)
+    - Compliance with all debt-related covenants as of March 31, 2024 (10-Q)
+- **Fundamentals:** VICI shows moderate leverage of 37.96% with adequate interest coverage of 4.07x, a healthy FFO yield proxy of 8.42%, and trades at a slight NAV premium of 1.18, indicating reasonable valuation. Liquidity is good (amihud illiquidity 0.037) and idiosyncratic volatility is moderate (0.122), suggesting no acute financial stress; overall financial health is adequate.
+    - ffo_yield_proxy: 0.084171
+    - leverage: 0.379578
+    - interest_cover: 4.072577
+    - navprem_book_adj: 1.182389
+    - amihud_illiq: 0.037017
+    - idio_vol: 0.122472
+- **Macro:** High interest rates (Fed funds 5.33%, 10Y 4.51%) and inverted yield curve (spread -0.38) create headwinds for net lease REITs like VICI, as higher discount rates reduce property valuations and increase refinancing costs. However, gaming demand remains resilient with low unemployment (3.9%) and moderate inflation (3.24%), providing some support. Overall, the macro environment is moderately unfavorable for VICI's sector.
+    - FEDFUNDS_lag1: 5.33%
+    - DGS10_lag1: 4.51%
+    - term_spread_10y_2y_lag1: -0.38 (inverted)
+    - cpi_yoy_lag1: 3.24%
+    - UNRATE_lag1: 3.9%
+- **Price:** Short-term positive (1m +1.25%) but longer-term negative (3m -2.42%, 6m -7.50%, 12m -3.64%). Moderate volatility (12.84%) and drawdown (-9.66%) suggest risk but not extreme. Overall mild downward momentum prevails due to negative multi-month returns.
+    - 1-month return positive at 0.0125
+    - 3-month return negative at -0.0242
+    - 6-month return negative at -0.0750
+    - 12-month return negative at -0.0364
+    - annualized volatility at 0.1284
+    - drawdown at -0.0966
+- **Aggregator:** Macro and Price agents both indicate downward pressure from interest rates and negative momentum, assigning high probability to reduce (0.50 each). Fundamentals agent sees adequate financial health and slight positive tilt (increase 0.40, hold 0.40), while Disclosure is nearly neutral. The consensus leans toward reduce but with notable dissent from Fundamentals, resulting in moderate agreement.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) as macro and price pressure conflict with adequate fundamentals and neutral disclosure. Tangential relevance (1) and fuzzy actionability (1) as the rationale relies on generic macro/momentum. 
+
+---
+
+## 42. VICI — 2025-10-31
+
+- **Disclosure:** Disclosure is largely routine with no new or worsening risk factors; 10-Q shows improved operating cash flow and successful debt refinancing, while 8-Ks are standard earnings releases. Overall sentiment is neutral with a slight positive bias due to stable fundamentals.
+    - 10-K Item 1A reiterates standard risks including tenant concentration, gaming industry dependency, and debt levels.
+    - 10-Q reports net cash from operations increased $80.6 million for nine months ended September 30, 2025 vs. 2024.
+    - 10-Q states compliance with all debt covenants as of September 30, 2025.
+    - 8-Ks dated April 30, July 30, and October 30, 2025 report quarterly earnings with no material adverse events.
+- **Fundamentals:** VICI exhibits strong financial health with a healthy FFO yield of 8.46%, moderate leverage of 36.88%, and adequate interest coverage of 4.27x. The stock trades at a slight NAV premium (1.19x) and has low illiquidity (0.032), indicating market confidence and resilience.
+    - ffo_yield_proxy: 0.084559 (8.46%)
+    - leverage: 0.368818 (36.88%)
+    - interest_cover: 4.274605 (4.27x)
+    - navprem_book_adj: 1.193747 (19.4% premium)
+    - amihud_illiq: 0.031714 (low illiquidity)
+- **Macro:** Elevated interest rates (Fed funds 4.22%, 10Y at 4.16%) pressure cap rates and present value of long-duration net lease assets. While the positive term spread (0.56) and low unemployment (4.4%) indicate a stable economy, gaming net lease faces cyclical sensitivity and refinancing risk. Inflation at 3.0% remains above target, limiting rate relief.
+    - FEDFUNDS_lag1: 4.22%
+    - DGS10_lag1: 4.16%
+    - DGS2_lag1: 3.60%
+    - term_spread_10y_2y_lag1: 0.56
+    - cpi_yoy_lag1: 3.02%
+    - UNRATE_lag1: 4.4%
+- **Price:** All return horizons are negative (1m -8.0%, 3m -6.7%, 6m -3.7%, 12m -0.2%), indicating consistent downward momentum. The 9.98% drawdown and moderate volatility (16.5%) suggest ongoing weakness rather than a temporary dip. Hence, reducing exposure is prudent.
+    - ret_1m: -0.080343
+    - ret_3m: -0.067185
+    - ret_6m: -0.037392
+    - ret_12m: -0.002392
+    - vol_annualized: 0.164791
+    - drawdown: -0.099770
+- **Aggregator:** Price and Macro agents strongly favor reduce due to negative momentum and elevated interest rates, while Fundamentals agent argues for increase based on strong financial health. Disclosure agent is neutral with a slight positive bias. The consensus leans reduce but with significant hold probability given fundamental strength, resulting in moderate agreement.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 1
+- actionability = 1
+- notes (optional): Partial support (1) due to strong disagreement between negative price/macro and solid financial health. Tangential relevance (1) and fuzzy actionability (1) because the downside driver is mostly price momentum. 
+
+---
+
+## 43. VTR — 2025-01-31
+
+- **Disclosure:** The 10-K risk factors are broad and typical for healthcare REITs, with no new material threats. The 10-Q highlights strong liquidity, successful capital market activities, and a favorable lease extension with Kindred that reduces tenant concentration risk. These factors suggest an improving risk profile relative to peers.
+    - 10-Q: Acquired 11 senior housing communities and 5 LTACs for $516M, plus 25 senior housing communities for $923M in October 2024.
+    - 10-Q: Extended Kindred Master Lease for 20 LTACs to 2030 with fixed rent and revenue-sharing; obtained warrants for 9.9% equity in ScionHealth.
+    - 10-Q: As of Sep 30, 2024, liquidity of $4.0B with no borrowings under commercial paper.
+    - 10-K: Standard risk factors including macroeconomic trends, tenant concentration, and interest rate exposure.
+- **Fundamentals:** VTR exhibits stressed financial health: interest cover of 1.14x barely covers interest expenses, leverage at 54.6% is high, and FFO yield is a meager 0.32%. Despite large market cap and NAV premium, these weak cash earnings and solvency metrics signal elevated default risk.
+    - ffo_yield_proxy: 0.003191
+    - leverage: 0.545628
+    - interest_cover: 1.135136
+- **Macro:** High interest rates (Fed funds 4.48%, 10Y 4.58%) increase cap rates and borrowing costs for healthcare REITs, but inelastic demand from aging demographics and government-backed tenants provide support. The flat yield curve (spread 0.33%) signals stable but elevated rate environment, leading to a neutral-to-negative outlook.
+    - FEDFUNDS_lag1: 4.480000
+    - DGS10_lag1: 4.580000
+    - term_spread_10y_2y_lag1: 0.330000
+    - cpi_yoy_lag1: 0.028707
+- **Price:** 12-month return is strong at 34.7% with moderate annualized volatility of 26.4%, indicating solid long-term momentum. However, the 3-month return is -7.0% and drawdown is -7.0%, signaling a recent pullback that tempers enthusiasm. Overall, the trend is mildly positive but warrants a hold stance until momentum reasserts.
+    - 1-month return: 2.5981%
+    - 3-month return: -7.0266%
+    - 6-month return: 12.6351%
+    - 12-month return: 34.7409%
+    - annualized volatility: 26.3785%
+    - drawdown: -7.0266%
+- **Aggregator:** Disclosure agent sees improving fundamentals (low tenant concentration, strong liquidity) but Fundamentals agent warns of stressed financial health (interest cover 1.14x, leverage 54.6%). Macro and Price agents are cautious due to high rates and recent pullback. The consensus is tilted toward hold/reduce with low agreement.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) as stressed financial health is mixed with improving disclosure and positive long-term momentum. Relevant (2) and actionable (2) by citing concrete solvency numbers like 1.14x interest cover and 54.6% leverage. 
+
+---
+
+## 44. VTR — 2024-03-31
+
+- **Disclosure:** The disclosures indicate standard risk factors for a healthcare REIT, but there are signs of stress including $92 million in impairments and reliance on a limited number of tenants. However, access to capital markets through a new ATM program and a Canadian debt offering suggests financial flexibility. Overall, the risk profile is neutral with a slight negative tilt due to impairments and tenant concentration.
+    - 10-K Item 1A lists risks related to tenant concentration including Brookdale, Ardent, Kindred, Atria and Sunrise
+    - 10-Q notes $92.0 million in impairments for nine months ended September 30, 2023
+    - 10-Q reports foreclosure on Santerre Mezzanine Loan and conversion to equity
+    - 8-K Filing 3: Filed new Registration Statement on Form S-3 and amended ATM equity program
+    - 8-K Filing 4: Private offering in Canada of Cdn$650 million of 5.10% Senior Notes due 2029
+- **Fundamentals:** VTR exhibits significant financial stress with an interest coverage ratio of only 1.135, barely covering interest expenses, and a low FFO yield proxy of 0.0044 indicating weak cash earnings relative to market cap. Leverage is moderate at 0.546, but combined with poor coverage and low yield, the firm's solvency risk is elevated.
+    - interest_cover: 1.135
+    - ffo_yield_proxy: 0.0044
+    - leverage: 0.5456
+- **Macro:** The healthcare REIT sector faces headwinds from high interest rates (FEDFUNDS at 5.33%) and an inverted yield curve (term spread -0.39), which increase financing costs and discount rates. However, demographic-driven demand for healthcare properties provides a defensive buffer, leading to a balanced but cautious outlook.
+    - FEDFUNDS_lag1: 5.33
+    - term_spread_10y_2y_lag1: -0.39
+    - cpi_yoy_lag1: 3.16%
+- **Price:** Recent 1-month return is positive at 4.03%, but the 3-month return is -11.73% and the drawdown is deep at -27.64%, with high annualized volatility of 26.57%. This mixed momentum combined with elevated risk suggests a cautious stance, leaning toward reducing exposure.
+    - ret_1m: 0.040287
+    - ret_3m: -0.117300
+    - ret_6m: 0.053543
+    - ret_12m: 0.044803
+    - vol_annualized: 0.265657
+    - drawdown: -0.276372
+- **Aggregator:** The fundamentals agent highlights severe financial stress with interest coverage of 1.135 and low FFO yield, driving a strong reduce signal. The price agent notes deep drawdown and high volatility, while the macro agent cites high interest rates and inverted yield curve as headwinds. The disclosure agent points to impairments and tenant concentration but acknowledges financial flexibility, resulting in a more balanced view. Overall, consensus leans towards reducing exposure due to elevated financial risk and headwinds from the macro environment, though some disagreement remains on the magnitude of downside.
+
+**Your scores:**
+
+- entailment = 2
+- relevance = 2
+- actionability = 2
+- notes (optional): Clear support (2) as the $92M impairment, terrible coverage, negative macro, and deep price drawdown all align. Directly relevant (2) and actionable (2) by citing specific drivers like the $92M impairment and 1.135 interest coverage. 
+
+---
+
+## 45. VTR — 2024-05-31
+
+- **Disclosure:** The filings show typical healthcare REIT risk factors with no new material adverse events. The 8-Ks indicate proactive debt management (C$650M note issuance) and resolution of activist investor involvement, which are mildly positive. However, tenant concentration and macroeconomic risks persist, leading to a neutral overall assessment.
+    - 10-K Risk Factors highlight reliance on key tenants like Brookdale, Atria, Sunrise, and Ardent.
+    - 8-K on Feb 29, 2024: Issued Cdn$650M 5.10% Senior Notes due 2029 to repay existing debt.
+    - 8-K on Mar 4, 2024: Entered cooperation agreement with Land & Buildings, appointing two new directors.
+- **Fundamentals:** High leverage (54.56%) and debt-to-equity (1.57) combined with very low interest coverage (1.14x) indicate severe solvency risk. FFO yield of 0.38% is extremely low, reflecting weak cash earnings. Despite a large market cap and modest NAV premium, financial stress is pronounced.
+    - interest_cover: 1.135
+    - leverage: 0.5456
+    - ffo_yield_proxy: 0.0038
+    - debt_to_equity: 1.568
+- **Macro:** Healthcare REITs face headwinds from elevated interest rates (Fed funds 5.33%, 10Y 4.69%) and an inverted yield curve (spread -0.35), which increase cap rates and financing costs. However, inelastic demand from aging demographics and moderate inflation (3.36% yoy) provide support, leading to a cautious outlook with balanced probabilities.
+    - FEDFUNDS_lag1: 5.330000
+    - DGS10_lag1: 4.690000
+    - term_spread_10y_2y_lag1: -0.350000
+    - cpi_yoy_lag1: 0.033608
+- **Price:** All return horizons are positive (1-month: +13.5%, 3-month: +20.1%, 6-month: +11.8%, 12-month: +21.2%) with moderate annualized volatility (25.9%) and a manageable drawdown of -16.5%. This indicates strong upward momentum with reasonable risk, supporting a bullish view.
+    - 1-month return 0.135050
+    - 3-month return 0.200846
+    - 6-month return 0.117721
+    - 12-month return 0.211929
+    - annualized volatility 0.259050
+    - drawdown -0.164687
+- **Aggregator:** The Price agent reports strong upward momentum across all horizons, while the Fundamentals agent highlights severe financial stress with high leverage and extremely low interest coverage. The Disclosure and Macro agents are neutral to cautious, citing manageable debt actions and macro headwinds. Given the sharp disagreement between bullish momentum and bearish fundamentals, the consensus is uncertain with a slight tilt toward reduce due to solvency risks.
+
+**Your scores:**
+
+- entailment = 1
+- relevance = 2
+- actionability = 2
+- notes (optional): Partial support (1) due to sharp disagreement between extremely bullish price momentum and severely bearish fundamentals. Relevant (2) and actionable (2) by naming specific severe risks like the 1.14x interest coverage. 
+
+---
+
+Total time (minutes) = 120
+
+Declaration: I completed this scoring independently, consulted no information dated
+after any decision date, used no AI tools, and discussed no item with anyone before
+submitting.
+Signature / date: Kaixiang Zhang / 2026-07-09

@@ -1,0 +1,81 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Python caches and local tooling
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local caches
+.cache/
+.mplconfig/
+
+# Data and generated research artifacts
+data/
+filings/
+outputs/
+logs/
+
+# Large archives and binaries
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.parquet
+*.pkl
+*.pickle
+*.feather
+*.h5
+*.hdf5
+*.sqlite
+*.db
+
+# Keep source, lightweight config, docs, and tests under version control.
+*.log
+audit_log/decisions*.jsonl
+audit_log/predictions*.csv
+
+# departmental guidance deck (12 MB; exceeds the 10 MB repo limit)
+Dissertations--2026.pdf
+
+# masked-identity probe: raw 10MB prompt dump stays local (leak scan summary is committed)
+audit_log/masked_probe/scan_rendered_prompts.txt
+
+# Local-only working files (kept on disk and on archive/full-history; not in the public tree)
+paper/
+THESIS_*.md
+THESIS_*.pdf
+REFERENCES.md
+REFERENCE_VERIFICATION_*.md
+FORMAT_AUDIT_*.md
+CLAIM_CALIBRATION_*.md
+LITERATURE_ROUND2_*.md
+FEATURE_INVENTORY_AND_GAPS.md
+AI_USE_DECLARATION_DRAFT.md
+_legacy/
+dissertation_past/
+rater2_materials/
+.claude/
+outputs/reports/
+.Rhistory

@@ -1,0 +1,2 @@
+model_name,selected_hyperparameters_json,test_accuracy,test_macro_f1,test_weighted_f1,test_precision_increase,test_recall_increase,test_precision_hold,test_recall_hold,test_precision_reduce,test_recall_reduce
+Multinomial Logistic Regression,"{""C"": 0.01, ""l1_ratio"": 0.5, ""penalty"": ""elasticnet""}",0.37217391304347824,0.2857228533730873,0.3031512743088693,0.46745562130177515,0.34649122807017546,0.33251231527093594,0.7417582417582418,0.0,0.0

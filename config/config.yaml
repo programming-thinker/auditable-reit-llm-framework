@@ -1,0 +1,41 @@
+project:
+  start_date: '2015-01-01'
+  end_date: '2025-12-31'
+  frequency: monthly
+sec:
+  user_agent: Zhilan Chen zhilan.chen.research@example.com
+  request_sleep_seconds: 0.25
+  forms:
+  - 10-K
+  - 10-Q
+  - 8-K
+prices:
+  benchmark_tickers:
+  - VNQ
+  - XLRE
+  - SPY
+  interval: 1d
+macro:
+  fred_series:
+    FEDFUNDS: Effective Federal Funds Rate
+    DGS10: 10-Year Treasury Constant Maturity Rate
+    DGS2: 2-Year Treasury Constant Maturity Rate
+    CPIAUCSL: Consumer Price Index for All Urban Consumers
+    UNRATE: Unemployment Rate
+
+# LLM prompt lock. v2 framework (2026-06-26): 5-agent — added Fundamentals agent;
+# aggregator bumped to v2; disclosure input fixed to extract Item 1A (was XBRL).
+# SHAs recomputed from current prompt templates via Orchestrator._compute_prompts_sha.
+PROMPT_LOCK_TIMESTAMP: "2026-06-26T06:00:00Z"
+PROMPT_VERSIONS:
+  disclosure: 1
+  macro: 1
+  price: 1
+  fundamentals: 1
+  aggregator: 2
+PROMPT_SHAS:
+  disclosure: "8207c14f54ac29f0"
+  macro: "eff0e398f65f1dba"
+  price: "f3744184febf00b7"
+  fundamentals: "1ea5e30b29a865c6"
+  aggregator: "d440daa99c6524da"

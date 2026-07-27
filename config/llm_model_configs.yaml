@@ -1,0 +1,33 @@
+qwen3_8b_non_thinking:
+  provider: dashscope_openai_compatible
+  model: qwen3-8b
+  base_url_env: DASHSCOPE_BASE_URL
+  api_key_env: DASHSCOPE_API_KEY
+  enable_thinking: false
+  role: main_small_model_zero_shot_non_thinking
+
+qwen3_8b_thinking:
+  provider: dashscope_openai_compatible
+  model: qwen3-8b
+  base_url_env: DASHSCOPE_BASE_URL
+  api_key_env: DASHSCOPE_API_KEY
+  enable_thinking: true
+  role: main_small_model_zero_shot_thinking
+
+# DeepSeek V4 (released 2026-04-24). OpenAI-compatible endpoint.
+# Main model for thesis test run after Qwen/DashScope account ran into arrears.
+deepseek_v4_flash:
+  provider: deepseek_openai_compatible
+  model: deepseek-v4-flash
+  base_url_env: DEEPSEEK_BASE_URL
+  api_key_env: DEEPSEEK_API_KEY
+  enable_thinking: false
+  role: main_model_zero_shot_non_thinking
+
+deepseek_v4_pro:
+  provider: deepseek_openai_compatible
+  model: deepseek-v4-pro
+  base_url_env: DEEPSEEK_BASE_URL
+  api_key_env: DEEPSEEK_API_KEY
+  enable_thinking: false
+  role: main_model_zero_shot_pro
