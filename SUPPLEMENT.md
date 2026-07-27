@@ -37,7 +37,7 @@ REITs (`config/reit_universe.csv`):
 
 **A.2 Label-threshold sensitivity.** The ±2% band is robust: varying the threshold shifts
 the class proportions monotonically but does not change the qualitative findings (full
-panel, source `label_threshold_sensitivity_label_distribution.csv`). *Note: this
+panel, source `outputs/tables/label_threshold_sensitivity_label_distribution.csv`). *Note: this
 sensitivity panel is computed on the 3,214-firm-month pre-filter (V5-era) panel used by
 the original sensitivity script, so its ±2% row differs from the 3,189-row analysis
 panel of Table 1 by ≈0.2 percentage points.*
