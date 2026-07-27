@@ -48,9 +48,11 @@ and both human raters' materials (`audit_log/rater2/`, spot-check worksheets).
 | `.cache/llm_responses/` (diskcache of raw API responses) | optional | byte-level replay of individual calls |
 | `filings/` (SEC filing text + raw HTML) | 4.6 GB (291 MB compressed) | *optional*: only to rebuild disclosure inputs from scratch or re-run agents live |
 
-**Part 3 — Documents.** This guide and `CANONICAL_RESULTS.md` (in the repository).
-The dissertation text and its supplementary materials are submitted separately through
-the examination process and are not distributed here.
+**Part 3 — Documents.** This guide, `CANONICAL_RESULTS.md`, `DATA.md`, and
+`SUPPLEMENT.md` — the thesis supplementary materials in full (universe and variable
+definitions, agent prompts with SHA pins, reproducibility map, audit schema), ending
+with a section-by-section reproduction path. The dissertation text itself is submitted
+separately through the examination process and is not distributed here.
 
 ## 2. Environment
 
@@ -112,6 +114,8 @@ CSV files listed above.
 
 - `CANONICAL_RESULTS.md` — the number ledger every thesis figure traces to.
 - `audit_log/SCHEMA.md` — decision-record schema (append-only log).
-- `REFERENCE_VERIFICATION_*.md` and `CLAIM_CALIBRATION_2026-07-20.md` — four rounds of
-  bibliography verification and the pre-submission claim-calibration record.
-- `FORMAT_AUDIT_2026-07-12.md` — the page-by-page format audit of the typeset thesis.
+- `SUPPLEMENT.md` — the thesis supplement: prompt SHA pins, variable definitions, and
+  the audit-log schema in context, with its own reproduction path.
+- Process records (four rounds of bibliography verification, the pre-submission
+  claim-calibration record, the page-by-page format audit) are retained by the author
+  and available on request; they concern the thesis text rather than the numbers.

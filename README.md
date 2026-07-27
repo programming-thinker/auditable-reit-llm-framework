@@ -17,7 +17,10 @@ append-only audit log, and an outcome-blind judge's entailment reading is corrob
 by two human raters, one of them independent. All headline numbers reconcile to
 [`CANONICAL_RESULTS.md`](CANONICAL_RESULTS.md).
 
-The dissertation text itself is not distributed here before examination.
+The dissertation text itself is not distributed here before examination; its
+supplementary materials (universe and variable definitions, agent prompts and SHA pins,
+reproducibility map, audit schema) are published in full as
+[`SUPPLEMENT.md`](SUPPLEMENT.md), which ends with a step-by-step reproduction path.
 
 ## Quick start
 
@@ -48,6 +51,7 @@ from scratch. Archives can also be downloaded from the
 | `config/` | REIT universe definition and the SHA-pinned prompt lock |
 | `tests/` | Unit tests + the `reproduce_v6` golden-snapshot regression |
 | `DATA.md` | Raw-data page: sources, inventory, and rebuild-from-raw instructions |
+| `SUPPLEMENT.md` | Thesis supplementary materials (Sections A–D) + how to reproduce each |
 | `CANONICAL_RESULTS.md` | The single ledger every reported number traces to |
 | `REPLICATION_GUIDE.md` | Exhibit-by-exhibit script/data map and full instructions |
 
