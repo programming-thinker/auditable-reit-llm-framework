@@ -31,8 +31,10 @@ make reproduce_v6                              # golden-snapshot regression, 6-d
 make test                                      # unit tests (recorded LLM responses, no API)
 ```
 
-`filings.tar.gz` (291 MB compressed, 4.6 GB extracted) is needed only to rebuild
-disclosure inputs from scratch. Archives can also be downloaded from the
+`data_raw.tar.gz` (13 MB) is the raw layer on its own — Yahoo prices, FRED series,
+EDGAR submission indexes — documented in [`DATA.md`](DATA.md). `filings.tar.gz`
+(291 MB compressed, 4.6 GB extracted) is needed only to rebuild disclosure inputs
+from scratch. Archives can also be downloaded from the
 [Releases page](../../releases) in a browser.
 
 ## Repository map
@@ -45,6 +47,7 @@ disclosure inputs from scratch. Archives can also be downloaded from the
 | `audit_log/` | Append-only decision evidence: schema, cost ledgers, masked-identity probe, corrected-feed rerun, human-rater materials |
 | `config/` | REIT universe definition and the SHA-pinned prompt lock |
 | `tests/` | Unit tests + the `reproduce_v6` golden-snapshot regression |
+| `DATA.md` | Raw-data page: sources, inventory, and rebuild-from-raw instructions |
 | `CANONICAL_RESULTS.md` | The single ledger every reported number traces to |
 | `REPLICATION_GUIDE.md` | Exhibit-by-exhibit script/data map and full instructions |
 
