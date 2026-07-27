@@ -34,11 +34,16 @@ make reproduce_v6                              # golden-snapshot regression, 6-d
 make test                                      # unit tests (recorded LLM responses, no API)
 ```
 
-`data_raw.tar.gz` (13 MB) is the raw layer on its own — Yahoo prices, FRED series,
-EDGAR submission indexes — documented in [`DATA.md`](DATA.md). `filings.tar.gz`
-(291 MB compressed, 4.6 GB extracted) is needed only to rebuild disclosure inputs
-from scratch. Archives can also be downloaded from the
-[Releases page](../../releases) in a browser.
+The release ships five separate assets; each extracts into the repository root
+(they can also be downloaded from the [Releases page](../../releases) in a browser):
+
+| Asset | Size | Contents |
+|---|---|---|
+| **`data_raw.tar.gz`** | 2.8 MB | **The raw data alone** — Yahoo prices (28 tickers incl. SPY/VNQ/XLRE benchmarks), FRED series, 25 EDGAR submission indexes. Every file is listed individually in [`DATA.md`](DATA.md). |
+| `data.tar.gz` | 219 MB | Full data bundle: `data/raw/` + interim + processed panels |
+| `outputs.tar.gz` | 107 MB | Every result CSV, golden snapshots, figures |
+| `audit_log_local.tar.gz` | 1.1 MB | `decisions.jsonl` + `predictions.csv` of the main test run |
+| `filings.tar.gz` | 291 MB | SEC filing text + raw HTML (4.6 GB extracted); only needed to rebuild disclosure inputs from scratch |
 
 ## Repository map
 

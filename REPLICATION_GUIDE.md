@@ -41,7 +41,7 @@ and both human raters' materials (`audit_log/rater2/`, spot-check worksheets).
 
 | Directory / file | Size | Needed for |
 |---|---|---|
-| `data_raw.tar.gz` — the raw layer alone (Yahoo prices, FRED, EDGAR submission indexes; see `DATA.md`) | 13 MB | auditing sources / rebuilding everything from scratch |
+| `data_raw.tar.gz` — the raw layer alone (Yahoo prices, FRED, EDGAR submission indexes; every file listed in `DATA.md`) | 2.8 MB (13 MB extracted) | auditing sources / rebuilding everything from scratch |
 | `data/` (raw + interim + processed panels, full bundle) | 0.8 GB | rebuilding features and all baseline results |
 | `outputs/` (every result CSV, golden snapshots, figures) | 0.5 GB | direct inspection and the `reproduce_v6` diff |
 | `audit_log/decisions.jsonl` + `predictions.csv` (main v2 test run) | ~10 MB | replaying every LLM decision without an API key |

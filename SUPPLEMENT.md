@@ -250,10 +250,19 @@ for f in *.tar.gz; do tar xzf "$f"; done
 pip install -r requirements.txt
 ```
 
-(No GitHub CLI? The same archives are on the
-[Releases page](../../releases). `data_raw.tar.gz` adds the raw layer alone,
-`filings.tar.gz` the SEC filing text — see [`DATA.md`](DATA.md) and
-[`REPLICATION_GUIDE.md`](REPLICATION_GUIDE.md) §1 for what each is for.)
+**The raw data ships separately.** `data_raw.tar.gz` (2.8 MB) contains `data/raw/`
+alone — the Yahoo price series, the FRED macro series, and the 25 EDGAR submission
+indexes — and every one of its 30 files is listed individually, with sizes, row
+counts, and coverage, in [`DATA.md`](DATA.md):
+
+```bash
+gh release download v1.0-submission -p 'data_raw.tar.gz'
+tar xzf data_raw.tar.gz            # -> data/raw/
+```
+
+(No GitHub CLI? The same archives are on the [Releases page](../../releases);
+`filings.tar.gz` adds the SEC filing text — see
+[`REPLICATION_GUIDE.md`](REPLICATION_GUIDE.md) §1 for what each asset is for.)
 
 **Step 1 — Verify Section A (universe, labels, variables).**
 The universe table is `config/reit_universe.csv`. The feature inventory of A.3 is
