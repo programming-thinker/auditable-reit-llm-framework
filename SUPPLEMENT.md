@@ -238,7 +238,9 @@ reference is `audit_log/SCHEMA.md`.
 ## How to reproduce with this supplement
 
 Everything documented above is verifiable from this repository plus the
-`v1.0-submission` release assets. Suggested path, in order:
+`v1.0-submission` release assets. For a hand-held, zero-assumption walkthrough with
+the expected output of every command, follow [`TUTORIAL.md`](TUTORIAL.md); the
+section-by-section path below maps this supplement onto it. In order:
 
 **Step 0 — Set up (once).**
 
@@ -252,7 +254,7 @@ pip install -r requirements.txt
 
 **The raw data ships separately.** `data_raw.tar.gz` (2.8 MB) contains `data/raw/`
 alone — the Yahoo price series, the FRED macro series, and the 25 EDGAR submission
-indexes — and every one of its 30 files is listed individually, with sizes, row
+indexes — and every one of its 29 files is listed individually, with sizes, row
 counts, and coverage, in [`DATA.md`](DATA.md):
 
 ```bash

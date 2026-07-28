@@ -9,7 +9,7 @@ below and ships in the companion archives.
 
 ```bash
 gh release download v1.0-submission -p 'data_raw.tar.gz'
-tar xzf data_raw.tar.gz            # -> data/raw/ (30 files, listed below)
+tar xzf data_raw.tar.gz            # -> data/raw/ (29 files, listed below)
 ```
 
 ## Sources at a glance
@@ -22,7 +22,7 @@ tar xzf data_raw.tar.gz            # -> data/raw/ (30 files, listed below)
 | SEC EDGAR (documents) | 10-K / 10-Q / 8-K raw HTML and cleaned text | `filings/` (separate asset `filings.tar.gz`) | `src/04_download_sec_filings.py`, `src/05_extract_item_text.py` |
 | SEC EDGAR (XBRL companyfacts API) | Point-in-time accounting facts behind the nine reconstructed fundamentals | fetched live from `data.sec.gov/api/xbrl/companyfacts/` (free, no key) | `analysis/build_fundamentals.py` |
 
-## `data/raw/` inventory — every file (30 files, 13.2 MB)
+## `data/raw/` inventory — every file (29 files, 13.2 MB)
 
 ### Prices and dividends (`data/raw/prices/`, 2 files)
 
@@ -85,10 +85,12 @@ files drive the point-in-time discipline: a value or document enters decision mo
 
 ```bash
 tar xzf data_raw.tar.gz            # -> data/raw/
+mkdir -p logs                      # the build scripts write their logs here
 python3 src/06a_build_monthly_price_signals.py
 python3 src/06b_build_monthly_macro_signals.py
 python3 src/06c_build_reit_monthly_panel.py
 python3 src/06d_create_backtest_ready_panel.py
+python3 src/06f_build_supplementary_features.py
 python3 src/06h_build_enriched_panel.py
 python3 src/06i_create_enriched_splits.py
 make reproduce_v6                  # must match golden snapshots to 6 dp

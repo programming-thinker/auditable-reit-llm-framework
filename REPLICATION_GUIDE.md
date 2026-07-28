@@ -28,9 +28,9 @@ scratch and can be skipped for the baseline reproduction.
 
 **Part 1 — Code repository (git).** Version-controlled and complete in itself for code
 review: `src/` (structured-ML pipeline), `analysis/` (every table/figure generator),
-`llm/` (agents, orchestrator, EDGAR client, post-processing), `paper/` (thesis build
-chain: markdown → LaTeX → Overleaf zips), `tests/`, `config/` (universe, prompt lock),
-`Makefile`, `requirements.txt`, and the committed part of `audit_log/` — the schema
+`llm/` (agents, orchestrator, EDGAR client, post-processing), `tests/`, `config/`
+(universe, prompt lock), `Makefile`, `requirements.txt` + `requirements-lock.txt`,
+and the committed part of `audit_log/` — the schema
 (`audit_log/SCHEMA.md`), cost ledgers, the masked-identity probe logs, the v3
 corrected-feed run (`audit_log/v3_corrected_feed/decisions.jsonl`, `predictions_v3.csv`),
 and both human raters' materials (`audit_log/rater2/`, spot-check worksheets).
@@ -44,11 +44,12 @@ and both human raters' materials (`audit_log/rater2/`, spot-check worksheets).
 | `data_raw.tar.gz` — the raw layer alone (Yahoo prices, FRED, EDGAR submission indexes; every file listed in `DATA.md`) | 2.8 MB (13 MB extracted) | auditing sources / rebuilding everything from scratch |
 | `data/` (raw + interim + processed panels, full bundle) | 0.8 GB | rebuilding features and all baseline results |
 | `outputs/` (every result CSV, golden snapshots, figures) | 0.5 GB | direct inspection and the `reproduce_v6` diff |
-| `audit_log/decisions.jsonl` + `predictions.csv` (main v2 test run) | ~10 MB | replaying every LLM decision without an API key |
-| `.cache/llm_responses/` (diskcache of raw API responses) | optional | byte-level replay of individual calls |
+| `audit_log/decisions.jsonl` + `predictions.csv` (main v2 test run) | ~2 MB (1.1 MB compressed) | replaying every LLM decision without an API key |
+| `.cache/llm_responses/` (diskcache of raw API responses) | not published — available from the author on request | byte-level replay of individual calls |
 | `filings/` (SEC filing text + raw HTML) | 4.6 GB (291 MB compressed) | *optional*: only to rebuild disclosure inputs from scratch or re-run agents live |
 
-**Part 3 — Documents.** This guide, `CANONICAL_RESULTS.md`, `DATA.md`, and
+**Part 3 — Documents.** This guide, `TUTORIAL.md` (step-by-step walkthrough with
+expected outputs), `CANONICAL_RESULTS.md`, `DATA.md`, and
 `SUPPLEMENT.md` — the thesis supplementary materials in full (universe and variable
 definitions, agent prompts with SHA pins, reproducibility map, audit schema), ending
 with a section-by-section reproduction path. The dissertation text itself is submitted
@@ -56,10 +57,12 @@ separately through the examination process and is not distributed here.
 
 ## 2. Environment
 
-- Python 3.11+; `make install` (installs `requirements.txt`: pandas, pyarrow,
-  scikit-learn, statsmodels, matplotlib, pydantic v2, diskcache, tenacity, structlog).
-- LaTeX only if rebuilding the PDF locally: TeX Live 2022+ with XeLaTeX and biber
-  (Overleaf handles both automatically).
+- Python 3.9+ in a virtual environment. Two install options:
+  `pip install -r requirements-lock.txt` (the exact package versions the results were
+  produced and verified under, on Python 3.8/3.9; the pins install on 3.8–3.11) or
+  `pip install -r requirements.txt` (current versions, any recent Python — also
+  verified to pass `reproduce_v6` at packaging time). `TUTORIAL.md` walks through both.
+- No LaTeX is needed: the thesis PDF is typeset outside this repository.
 - No API key is required for any reproduction step below; a DeepSeek key is needed only
   for *fresh* LLM calls (Section 5).
 
@@ -104,10 +107,12 @@ CSV files listed above.
 - **Prompt integrity.** Prompts are versioned in `llm/prompts/` and SHA-pinned in
   `config/config.yaml` (lock timestamp 2026-06-26). `make prompt_sha` recomputes the
   hashes; they must match both the config and the per-decision log entries.
-- **Fresh runs (key required).** `make llm_dev_run` (1 REIT × 2 months) smoke-tests the
-  pipeline; the full test window is one-shot and refuses to run without the lock
-  timestamp. Deterministic decoding (temperature 0, pinned model version
-  `deepseek-v4-flash`) makes repeated calls cache-identical via
+- **Fresh runs (key required).** Extract `filings.tar.gz` first (the Disclosure agent
+  reads filing text from `filings/`), set `DEEPSEEK_API_KEY` and `DEEPSEEK_BASE_URL`
+  in `.env`, then `make llm_dev_run` (1 REIT × 2 months, model config
+  `deepseek_v4_flash`) smoke-tests the pipeline; the full test window is one-shot and
+  refuses to run without the lock timestamp. Deterministic decoding (temperature 0,
+  pinned model version `deepseek-v4-flash`) makes repeated calls cache-identical via
   `.cache/llm_responses/`.
 
 ## 6. Integrity anchors

@@ -24,6 +24,10 @@ reproducibility map, audit schema) are published in full as
 
 ## Quick start
 
+**New to the package? Follow [`TUTORIAL.md`](TUTORIAL.md)** — a step-by-step,
+zero-assumption walkthrough with the expected output of every command, tested
+end-to-end in a fresh clone. The condensed version:
+
 ```bash
 git clone https://github.com/programming-thinker/auditable-reit-llm-framework.git
 cd auditable-reit-llm-framework
@@ -55,6 +59,7 @@ The release ships five separate assets; each extracts into the repository root
 | `audit_log/` | Append-only decision evidence: schema, cost ledgers, masked-identity probe, corrected-feed rerun, human-rater materials |
 | `config/` | REIT universe definition and the SHA-pinned prompt lock |
 | `tests/` | Unit tests + the `reproduce_v6` golden-snapshot regression |
+| `TUTORIAL.md` | Step-by-step reproduction walkthrough with expected outputs |
 | `DATA.md` | Raw-data page: sources, inventory, and rebuild-from-raw instructions |
 | `SUPPLEMENT.md` | Thesis supplementary materials (Sections A–D) + how to reproduce each |
 | `CANONICAL_RESULTS.md` | The single ledger every reported number traces to |

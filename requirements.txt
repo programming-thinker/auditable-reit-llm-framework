@@ -1,12 +1,30 @@
-python-dotenv
+# Core numeric / statistics stack
+numpy
+pandas>=2.0
+pyarrow
+scipy
+scikit-learn
+statsmodels
+matplotlib
+
+# LLM framework
 openai
-pyyaml
+pydantic>=2.0
 diskcache
 tenacity
 structlog
-pydantic>=2.0
+python-dotenv
+pyyaml
+
+# Data acquisition (raw-layer rebuild only)
 fredapi
 yfinance
-pandas>=2.0
-numpy
-pyarrow
+requests
+beautifulsoup4
+PyMuPDF
+
+# Testing
+pytest
+
+# For bit-identical reproduction of the golden snapshots, install the exact
+# verified versions instead:  pip install -r requirements-lock.txt
