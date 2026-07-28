@@ -33,24 +33,22 @@ lint:
 # ---------- Prompts ----------
 
 prompt_sha:
-	@$(PYTHON) -c "\
-	import hashlib; \
-	from pathlib import Path; \
-	for p in sorted(Path('llm/prompts').glob('*.md')): \
-	    body = p.read_text(); \
-	    sha = hashlib.sha256(body.encode()).hexdigest()[:16]; \
-	    print(f'{p.name}: {sha}')"
+	@$(PYTHON) tests/check_prompt_sha.py
 
 # ---------- LLM Runs ----------
 
+# Model config defaults to the pinned thesis model (deepseek_v4_flash, needs
+# DEEPSEEK_API_KEY + DEEPSEEK_BASE_URL in .env). Override with MODEL_CONFIG=.
+MODEL_CONFIG ?= deepseek_v4_flash
+
 llm_dev_run:
-	$(PYTHON) -m llm.run --mode dev
+	$(PYTHON) -m llm.run --mode dev --model-config $(MODEL_CONFIG)
 
 llm_validation:
-	$(PYTHON) -m llm.run --mode validation
+	$(PYTHON) -m llm.run --mode validation --model-config $(MODEL_CONFIG)
 
 llm_test_run:
-	$(PYTHON) -m llm.run --mode test
+	$(PYTHON) -m llm.run --mode test --model-config $(MODEL_CONFIG)
 
 # ---------- Reporting ----------
 
