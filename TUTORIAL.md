@@ -57,7 +57,8 @@ This creates `data/`, fills `outputs/`, and adds the decision log
 (`audit_log/decisions.jsonl`, `audit_log/predictions.csv`) next to the committed audit
 files. The other two assets are optional here: `data_raw.tar.gz` is the raw layer
 alone (every file listed in `DATA.md`), and `filings.tar.gz` (4.6 GB extracted) is
-needed only to rebuild disclosure inputs from scratch.
+the raw-HTML provenance layer behind the committed filing text
+(`filings/clean_text/`), needed only to re-extract that text from source.
 
 ## 3. Install the Python environment
 
@@ -115,10 +116,9 @@ recall the thesis reports regenerates bit-for-bit from the shipped data.
 make test
 ```
 
-Expected: **51 passed, 10 skipped** (a few seconds; LLM tests run against recorded
-responses, no network or key involved). The 10 skipped tests are the Item-1A
-extractor tests, which need the SEC filing text: they skip cleanly unless you have
-extracted the optional `filings.tar.gz`, after which the full count is **61 passed**.
+Expected: **61 passed** (a few seconds; LLM tests run against recorded responses, no
+network or key involved — the SEC filing text they read, `filings/clean_text/`, is
+committed in the repository).
 
 ## 6. Verify the prompt lock
 
@@ -185,12 +185,14 @@ which maps every reported result to its source CSV.
 - **Rebuild all panels from the raw layer.** Download `data_raw.tar.gz` and follow
   "Rebuilding everything from raw" in [`DATA.md`](DATA.md); it ends in the same
   `make reproduce_v6` check.
-- **Rebuild disclosure inputs from SEC filings.** Download `filings.tar.gz`
-  (4.6 GB extracted); `src/05_extract_item_text.py` re-extracts the Item 1A /
-  10-Q / 8-K text the Disclosure agent reads.
-- **Fresh LLM calls.** The only step that needs an API key. Prerequisites: extract
-  `filings.tar.gz` (the Disclosure agent reads the filing text from `filings/`), copy
-  `.env.example` to `.env`, and set **both** `DEEPSEEK_API_KEY` and
+- **Re-extract the filing text from source.** The clean text the Disclosure agent
+  reads is committed (`filings/clean_text/`, 4,451 files). To regenerate it from
+  the original EDGAR HTML, download `filings.tar.gz` (4.6 GB extracted, includes
+  `filings/raw_html/`) and run `src/05_extract_item_text.py`.
+- **Fresh LLM calls.** The only step that needs an API key. Prerequisites: the
+  Step 2 archives extracted (the filing metadata and panels come from
+  `data.tar.gz`; the filing text itself is already committed), then copy
+  `.env.example` to `.env` and set **both** `DEEPSEEK_API_KEY` and
   `DEEPSEEK_BASE_URL=https://api.deepseek.com`. Then run `make llm_dev_run`
   (1 REIT × 2 months smoke test; it targets the pinned thesis model config
   `deepseek_v4_flash`). Decoding is deterministic (temperature 0, pinned model
@@ -202,7 +204,7 @@ which maps every reported result to its source CSV.
 | Level | Check | You have verified |
 |---|---|---|
 | 1 | `make reproduce_v6` → `PASSED` | the tuned baseline and its 0.000 reduce recall regenerate exactly from the shipped data |
-| 2 | `make test` → `51 passed, 10 skipped` | the pipeline's unit behaviour, including recorded-response LLM tests |
+| 2 | `make test` → `61 passed` | the pipeline's unit behaviour, including recorded-response LLM tests |
 | 3 | `make prompt_sha` → all `OK` | the prompts on disk are byte-identical to the locked versions used in the run |
 | 4 | Step 7 → `identical prediction columns: True` | the framework's 575 decisions replay exactly from the append-only audit log |
 | 5 | Step 8 scripts rerun cleanly | every exhibit re-derives from the shipped CSVs |

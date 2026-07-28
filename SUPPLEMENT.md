@@ -262,8 +262,9 @@ gh release download v1.0-submission -p 'data_raw.tar.gz'
 tar xzf data_raw.tar.gz            # -> data/raw/
 ```
 
-(No GitHub CLI? The same archives are on the [Releases page](../../releases);
-`filings.tar.gz` adds the SEC filing text — see
+(No GitHub CLI? The same archives are on the [Releases page](../../releases). The
+SEC filing text itself is committed at `filings/clean_text/`; `filings.tar.gz` adds
+only its raw-HTML source — see
 [`REPLICATION_GUIDE.md`](REPLICATION_GUIDE.md) §1 for what each asset is for.)
 
 **Step 1 — Verify Section A (universe, labels, variables).**

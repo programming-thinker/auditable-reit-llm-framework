@@ -19,7 +19,7 @@ tar xzf data_raw.tar.gz            # -> data/raw/ (29 files, listed below)
 | Yahoo Finance | Dividend-adjusted daily prices and volumes, monthly dividend yields, 25 REITs, 2015–2025 | `data/raw/prices/` | `src/01_download_prices.py`, `src/06g_download_dividend_yields.py` |
 | FRED (St. Louis Fed) | Federal funds rate, 10Y/2Y Treasury yields, term spread inputs, CPI, unemployment + supplementary series | `data/raw/macro/` | `src/02_download_macro.py`, `src/06e_download_supplementary_macro.py` |
 | SEC EDGAR (submissions API) | Per-company filing indexes (accession numbers, forms, `filed` dates) for the 25 CIKs | `data/raw/sec_submissions/` | `src/03_download_sec_metadata.py` |
-| SEC EDGAR (documents) | 10-K / 10-Q / 8-K raw HTML and cleaned text | `filings/` (separate asset `filings.tar.gz`) | `src/04_download_sec_filings.py`, `src/05_extract_item_text.py` |
+| SEC EDGAR (documents) | 10-K / 10-Q / 8-K raw HTML and cleaned text | cleaned text **committed**: `filings/clean_text/` (4,451 files, 224 MB); raw HTML in asset `filings.tar.gz` | `src/04_download_sec_filings.py`, `src/05_extract_item_text.py` |
 | SEC EDGAR (XBRL companyfacts API) | Point-in-time accounting facts behind the nine reconstructed fundamentals | fetched live from `data.sec.gov/api/xbrl/companyfacts/` (free, no key) | `analysis/build_fundamentals.py` |
 
 ## `data/raw/` inventory — every file (29 files, 13.2 MB)
@@ -74,8 +74,12 @@ files drive the point-in-time discipline: a value or document enters decision mo
 
 ### Raw inputs that live outside `data/raw/`
 
-- **SEC filing documents** (10-K/10-Q/8-K raw HTML + cleaned text) — `filings/`, own
-  release asset `filings.tar.gz` (291 MB compressed, 4.6 GB extracted).
+- **SEC filing documents** — the cleaned text the Disclosure agent reads is
+  committed and browsable at `filings/clean_text/` (4,451 files, 224 MB; GitHub's
+  folder view lists the first 1,000 — the full inventory is
+  `data/interim/filing_metadata.csv` inside `data.tar.gz`). The original raw HTML
+  (`filings/raw_html/`, 4.4 GB) ships in the release asset `filings.tar.gz`
+  (291 MB compressed).
 - **XBRL company facts** — not stored as files; fetched live from the free
   `data.sec.gov/api/xbrl/companyfacts/` API by `analysis/build_fundamentals.py`.
 - **Universe definition** (tickers, CIKs, sectors) — `config/reit_universe.csv`,

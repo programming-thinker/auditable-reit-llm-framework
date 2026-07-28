@@ -30,9 +30,13 @@ Thumbs.db
 .cache/
 .mplconfig/
 
-# Data and generated research artifacts
-data/
-filings/
+# Data and generated research artifacts.
+# Committed so they are browsable on GitHub: data/raw/ (29 files, 13 MB) and
+# filings/clean_text/ (4,451 SEC filing text extracts, 224 MB). Derived panels
+# and the 4.4 GB raw-HTML provenance layer stay release-asset-only.
+data/interim/
+data/processed/
+filings/raw_html/
 outputs/
 logs/
 

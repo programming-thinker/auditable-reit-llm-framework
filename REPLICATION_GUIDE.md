@@ -21,8 +21,9 @@ pip install -r requirements.txt
 make reproduce_v6      # golden-snapshot regression: key tables to 6 decimal places
 ```
 
-`filings.tar.gz` (291 MB compressed) is needed only to rebuild disclosure inputs from
-scratch and can be skipped for the baseline reproduction.
+The SEC filing text the Disclosure agent reads is committed in the repository
+(`filings/clean_text/`); `filings.tar.gz` (291 MB compressed) adds the raw-HTML
+provenance layer and is needed only to re-extract that text from source.
 
 ## 1. What to submit (three parts)
 
@@ -46,7 +47,7 @@ and both human raters' materials (`audit_log/rater2/`, spot-check worksheets).
 | `outputs/` (every result CSV, golden snapshots, figures) | 0.5 GB | direct inspection and the `reproduce_v6` diff |
 | `audit_log/decisions.jsonl` + `predictions.csv` (main v2 test run) | ~2 MB (1.1 MB compressed) | replaying every LLM decision without an API key |
 | `.cache/llm_responses/` (diskcache of raw API responses) | not published — available from the author on request | byte-level replay of individual calls |
-| `filings/` (SEC filing text + raw HTML) | 4.6 GB (291 MB compressed) | *optional*: only to rebuild disclosure inputs from scratch or re-run agents live |
+| `filings/` (full corpus incl. `raw_html/`; the `clean_text/` layer is already committed in-repo) | 4.6 GB (291 MB compressed) | *optional*: only to re-extract the filing text from the original EDGAR HTML |
 
 **Part 3 — Documents.** This guide, `TUTORIAL.md` (step-by-step walkthrough with
 expected outputs), `CANONICAL_RESULTS.md`, `DATA.md`, and
@@ -107,8 +108,9 @@ CSV files listed above.
 - **Prompt integrity.** Prompts are versioned in `llm/prompts/` and SHA-pinned in
   `config/config.yaml` (lock timestamp 2026-06-26). `make prompt_sha` recomputes the
   hashes; they must match both the config and the per-decision log entries.
-- **Fresh runs (key required).** Extract `filings.tar.gz` first (the Disclosure agent
-  reads filing text from `filings/`), set `DEEPSEEK_API_KEY` and `DEEPSEEK_BASE_URL`
+- **Fresh runs (key required).** The filing text is already in the clone
+  (`filings/clean_text/`); with `data.tar.gz` extracted (panels + filing metadata),
+  set `DEEPSEEK_API_KEY` and `DEEPSEEK_BASE_URL`
   in `.env`, then `make llm_dev_run` (1 REIT × 2 months, model config
   `deepseek_v4_flash`) smoke-tests the pipeline; the full test window is one-shot and
   refuses to run without the lock timestamp. Deterministic decoding (temperature 0,
